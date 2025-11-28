@@ -3,10 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   const [isDark, setIsDark] = useState(true);
   const [activeSection, setActiveSection] = useState("");
+  const [hoveredSection, setHoveredSection] = useState<string | null>(null);
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
 
   useEffect(() => {
@@ -38,14 +40,15 @@ export default function Home() {
   };
 
   const sections = [
-    "intro",
-    "about",
-    "experience",
-    "projects",
-    "community",
-    "skills",
-    "thoughts",
-    "connect",
+    { id: "intro", label: "Introduction" },
+    { id: "about", label: "À Propos" },
+    { id: "experience", label: "Expériences" },
+    { id: "projects", label: "Projets" },
+    { id: "gallery", label: "Galerie" },
+    { id: "community", label: "Communautés" },
+    { id: "skills", label: "Compétences" },
+    { id: "thoughts", label: "Publications" },
+    { id: "connect", label: "Contact" },
   ];
 
   return (
@@ -53,20 +56,28 @@ export default function Home() {
       <nav className="fixed left-8 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
         <div className="flex flex-col gap-4">
           {sections.map((section) => (
-            <button
-              key={section}
-              onClick={() =>
-                document
-                  .getElementById(section)
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className={`w-2 h-8 rounded-full transition-all duration-500 ${
-                activeSection === section
-                  ? "bg-foreground"
-                  : "bg-muted-foreground/30 hover:bg-muted-foreground/60"
-              }`}
-              aria-label={`Naviguer vers ${section}`}
-            />
+            <div key={section.id} className="relative group">
+              <button
+                onClick={() =>
+                  document
+                    .getElementById(section.id)
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                onMouseEnter={() => setHoveredSection(section.id)}
+                onMouseLeave={() => setHoveredSection(null)}
+                className={`w-2 h-8 rounded-full transition-all duration-500 ${
+                  activeSection === section.id
+                    ? "bg-foreground"
+                    : "bg-muted-foreground/30 hover:bg-muted-foreground/60"
+                }`}
+                aria-label={`Naviguer vers ${section.label}`}
+              />
+              {hoveredSection === section.id && (
+                <div className="absolute left-6 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-foreground text-background text-sm rounded whitespace-nowrap shadow-lg animate-fade-in">
+                  {section.label}
+                </div>
+              )}
+            </div>
           ))}
         </div>
       </nav>
@@ -75,7 +86,7 @@ export default function Home() {
         <header
           id="intro"
           ref={(el) => {
-            const index = sections.indexOf("intro");
+            const index = sections.findIndex((s) => s.id === "intro");
             if (index !== -1) sectionsRef.current[index] = el;
           }}
           className="min-h-screen flex items-center opacity-0"
@@ -121,7 +132,7 @@ export default function Home() {
                   <div className="text-foreground">
                     Lead Développeur Fullstack
                   </div>
-                  <div className="text-muted-foreground">@ Teratany</div>
+                  <div className="text-muted-foreground">À Teratany</div>
                   <div className="text-xs text-muted-foreground">
                     05/2022 — Aujourd'hui
                   </div>
@@ -150,6 +161,28 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+              <Link
+                href="/CV-Andritiana-Steve-Rakotonimanana.pdf"
+                download
+                className="cursor-pointer"
+              >
+                <Button variant="ghost" className="cursor-pointer">
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    />
+                  </svg>
+                  Télécharger le CV
+                </Button>
+              </Link>
             </div>
           </div>
         </header>
@@ -157,10 +190,10 @@ export default function Home() {
         <section
           id="about"
           ref={(el) => {
-            const index = sections.indexOf("about");
+            const index = sections.findIndex((s) => s.id === "about");
             if (index !== -1) sectionsRef.current[index] = el;
           }}
-          className="min-h-screen py-20 sm:py-32 opacity-0"
+          className="py-20 sm:py-32 opacity-0"
         >
           <div className="space-y-12 sm:space-y-16">
             <h2 className="text-3xl sm:text-4xl font-light">À Propos</h2>
@@ -206,6 +239,15 @@ export default function Home() {
                         2019 — 2022
                       </div>
                     </div>
+                    <div>
+                      <div className="text-foreground font-medium">
+                        Baccalauréat Série D
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        Le Petit Nid Soavimbahoaka
+                      </div>
+                      <div className="text-xs text-muted-foreground">2018</div>
+                    </div>
                   </div>
                 </div>
 
@@ -235,10 +277,10 @@ export default function Home() {
         <section
           id="experience"
           ref={(el) => {
-            const index = sections.indexOf("experience");
+            const index = sections.findIndex((s) => s.id === "experience");
             if (index !== -1) sectionsRef.current[index] = el;
           }}
-          className="min-h-screen py-20 sm:py-32 opacity-0"
+          className="py-20 sm:py-32 opacity-0"
         >
           <div className="space-y-12 sm:space-y-16">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
@@ -365,7 +407,7 @@ export default function Home() {
                     <p className="text-muted-foreground leading-relaxed max-w-lg">
                       {job.description}
                     </p>
-                    <div className="flex flex-wrap gap-2 gap-y-1  mt-2 lg:mt-0">
+                    <div className="flex flex-wrap gap-2 gap-y-1 mt-2 lg:mt-0">
                       {job.tech.map((tech) => (
                         <span
                           key={tech}
@@ -385,7 +427,7 @@ export default function Home() {
         <section
           id="projects"
           ref={(el) => {
-            const index = sections.indexOf("projects");
+            const index = sections.findIndex((s) => s.id === "projects");
             if (index !== -1) sectionsRef.current[index] = el;
           }}
           className="py-20 sm:py-32 opacity-0"
@@ -454,7 +496,7 @@ export default function Home() {
                     <Image
                       src={project.image}
                       alt={project.title}
-                      className="absolute inset-0"
+                      className="absolute inset-0 object-cover"
                       width={1200}
                       height={500}
                     />
@@ -510,9 +552,88 @@ export default function Home() {
         </section>
 
         <section
+          id="gallery"
+          ref={(el) => {
+            const index = sections.findIndex((s) => s.id === "gallery");
+            if (index !== -1) sectionsRef.current[index] = el;
+          }}
+          className="py-20 sm:py-32 opacity-0"
+        >
+          <div className="space-y-12 sm:space-y-16">
+            <h2 className="text-3xl sm:text-4xl font-light">Galerie</h2>
+
+            <div className="flex flex-wrap lg:flex-nowrap gap-4">
+              {(() => {
+                const photos = [
+                  { src: "/galerie/1.jpg", alt: "Le Staff du GDSC ISPM 2023" },
+                  {
+                    src: "/galerie/2.jpg",
+                    alt: "Prise de parole lors de l'info session GDSC ISPM",
+                  },
+                  { src: "/galerie/3.jpg", alt: "Sortie de promotion" },
+                  {
+                    src: "/galerie/4.jpg",
+                    alt: "Mon Setup",
+                  },
+                  {
+                    src: "/galerie/5.jpg",
+                    alt: "Workshop sur le thème du DevOps",
+                  },
+                ];
+
+                const column1 = photos.filter((_, i) => i % 2 === 0);
+                const column2 = photos.filter((_, i) => i % 2 !== 0);
+
+                return (
+                  <>
+                    <div className="flex flex-col gap-4 w-full lg:w-1/2">
+                      {column1.map((photo, index) => (
+                        <div
+                          key={index}
+                          className="group relative overflow-hidden rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-500"
+                        >
+                          <Image
+                            src={photo.src}
+                            alt={photo.alt}
+                            width={1200} // Example width, adjust as needed
+                            height={800} // Example height, adjust as needed to maintain aspect ratio
+                            className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                            <span className="text-sm text-foreground">{photo.alt}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex flex-col gap-4 w-full lg:w-1/2">
+                      {column2.map((photo, index) => (
+                        <div
+                          key={index}
+                          className="group relative overflow-hidden rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-500"
+                        >
+                          <Image
+                            src={photo.src}
+                            alt={photo.alt}
+                            width={1200} // Example width, adjust as needed
+                            height={800} // Example height, adjust as needed to maintain aspect ratio
+                            className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                            <span className="text-sm text-foreground">{photo.alt}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                );
+              })()}
+            </div>
+          </div>
+        </section>
+        <section
           id="community"
           ref={(el) => {
-            const index = sections.indexOf("community");
+            const index = sections.findIndex((s) => s.id === "community");
             if (index !== -1) sectionsRef.current[index] = el;
           }}
           className="py-20 sm:py-32 opacity-0"
@@ -590,7 +711,7 @@ export default function Home() {
         <section
           id="skills"
           ref={(el) => {
-            const index = sections.indexOf("skills");
+            const index = sections.findIndex((s) => s.id === "skills");
             if (index !== -1) sectionsRef.current[index] = el;
           }}
           className="py-20 sm:py-32 opacity-0"
@@ -834,7 +955,7 @@ export default function Home() {
         <section
           id="thoughts"
           ref={(el) => {
-            const index = sections.indexOf("thoughts");
+            const index = sections.findIndex((s) => s.id === "thoughts");
             if (index !== -1) sectionsRef.current[index] = el;
           }}
           className="py-20 sm:py-32 opacity-0"
@@ -849,7 +970,7 @@ export default function Home() {
                 {
                   title: "Et si la voix du peuple trouvait enfin un écho ?",
                   excerpt:
-                    "Ces dernières semaines, en suivant l’actualité à Madagascar, j’ai vu défiler des centaines de publications sur Facebook.",
+                    "Ces dernières semaines, en suivant l'actualité à Madagascar, j'ai vu défiler des centaines de publications sur Facebook.",
                   date: "Nov 2025",
                   readTime: "6 min",
                   link: "https://www.linkedin.com/posts/andritianaa_et-si-la-voix-du-peuple-trouvait-enfin-un-activity-7386314531519635457-luf-?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ",
@@ -873,15 +994,17 @@ export default function Home() {
                 {
                   title: "Comment je reprends le contrôle",
                   excerpt:
-                    "4 à 5 heures par jour. C’est le temps que je passe, parfois sans m’en rendre compte, sur mon téléphone.",
+                    "4 à 5 heures par jour. C'est le temps que je passe, parfois sans m'en rendre compte, sur mon téléphone.",
                   date: "Sept 2025",
                   readTime: "3 min",
                   link: "https://www.linkedin.com/posts/andritianaa_4-%C3%A0-5-heures-par-jour-cest-le-temps-que-activity-7354050343325835264-Ki7G?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ",
                 },
               ].map((post, index) => (
-                <article
+                <Link
                   key={index}
-                  className="group p-6 sm:p-8 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-500 hover:shadow-lg cursor-pointer"
+                  href={post.link}
+                  target="_blank"
+                  className="group p-6 sm:p-8 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-500 hover:shadow-lg cursor-pointer block"
                 >
                   <div className="space-y-4">
                     <div className="flex items-center justify-between text-xs text-muted-foreground font-mono">
@@ -914,7 +1037,7 @@ export default function Home() {
                       </svg>
                     </div>
                   </div>
-                </article>
+                </Link>
               ))}
             </div>
           </div>
@@ -923,7 +1046,7 @@ export default function Home() {
         <section
           id="connect"
           ref={(el) => {
-            const index = sections.indexOf("connect");
+            const index = sections.findIndex((s) => s.id === "connect");
             if (index !== -1) sectionsRef.current[index] = el;
           }}
           className="py-20 sm:py-32 opacity-0"
