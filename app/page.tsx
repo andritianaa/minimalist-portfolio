@@ -215,6 +215,7 @@ export default function Home() {
                   </div>
                   <div className="space-y-2">
                     <Link
+                      target="_blank"
                       href="mailto:pro@andritiana.tech"
                       className="flex items-center gap-2 text-foreground hover:text-muted-foreground transition-colors"
                     >
@@ -481,6 +482,7 @@ export default function Home() {
 
                     {project.link && project.link !== "#" && (
                       <Link
+                        target="_blank"
                         href={project.link}
                         className="flex items-center gap-2 text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300"
                       >
@@ -599,155 +601,232 @@ export default function Home() {
             </h2>
 
             <div className="grid gap-8 lg:grid-cols-2">
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-sm text-muted-foreground font-mono mb-4">
-                    LANGAGES & FRAMEWORKS
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {[
-                      "JavaScript",
-                      "TypeScript",
-                      "Express",
-                      "NestJS",
-                      "React.js",
-                      "Next.js",
-                      "Vue.js",
-                      "TailwindCSS",
-                      "Shadcn",
-                      "Golang",
-                      "Python",
-                    ].map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1.5 text-sm border border-border rounded-full hover:border-muted-foreground/50 transition-colors duration-300"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+              {[
+                {
+                  title: "LANGAGES & FRAMEWORKS",
+                  skills: [
+                    {
+                      name: "JavaScript",
+                      iconUrl:
+                        "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+                    },
+                    {
+                      name: "TypeScript",
+                      iconUrl:
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
+                    },
+                    {
+                      name: "Express",
+                      iconUrl:
+                        "https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png",
+                    },
+                    {
+                      name: "NestJS",
+                      iconUrl: "https://cdn.simpleicons.org/nestjs",
+                    },
+                    {
+                      name: "React.js",
+                      iconUrl: "https://cdn.simpleicons.org/react",
+                    },
+                    {
+                      name: "Next.js",
+                      iconUrl:
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV9uzErWz9EXqZDxZ5lP9aYpMz8eK6rr5X3w&s",
+                    },
+                    {
+                      name: "Vue.js",
+                      iconUrl:
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/330px-Vue.js_Logo_2.svg.png",
+                    },
+                    {
+                      name: "TailwindCSS",
+                      iconUrl: "https://cdn.simpleicons.org/tailwindcss",
+                    },
+                    {
+                      name: "Shadcn",
+                      iconUrl:
+                        "https://avatars.githubusercontent.com/u/139895814?v=4",
+                    },
+                    {
+                      name: "Golang",
+                      iconUrl: "https://cdn.simpleicons.org/go",
+                    },
+                    {
+                      name: "Python",
+                      iconUrl:
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png",
+                    },
+                  ],
+                },
+                {
+                  title: "BASES DE DONNÉES & BACKEND",
+                  skills: [
+                    {
+                      name: "MongoDB",
+                      iconUrl: "https://cdn.simpleicons.org/mongodb",
+                    },
+                    {
+                      name: "PostgreSQL",
+                      iconUrl:
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1985px-Postgresql_elephant.svg.png",
+                    },
+                    {
+                      name: "Firebase",
+                      iconUrl: "https://cdn.simpleicons.org/firebase",
+                    },
+                    {
+                      name: "Supabase",
+                      iconUrl: "https://cdn.simpleicons.org/supabase",
+                    },
+                    {
+                      name: "Node.js",
+                      iconUrl: "https://cdn.simpleicons.org/nodedotjs",
+                    },
+                    {
+                      name: "Bun",
+                      iconUrl:
+                        "https://cdn.worldvectorlogo.com/logos/bun-1.svg",
+                    },
+                  ],
+                },
+                {
+                  title: "DEVOPS & GESTION DE VERSIONS",
+                  skills: [
+                    { name: "Git", iconUrl: "https://cdn.simpleicons.org/git" },
+                    {
+                      name: "GitHub",
+                      iconUrl:
+                        "https://cdn.worldvectorlogo.com/logos/github-icon-2.svg",
+                    },
+                    {
+                      name: "Linux",
+                      iconUrl:
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1012px-Tux.svg.png",
+                    },
+                    {
+                      name: "Docker",
+                      iconUrl: "https://cdn.simpleicons.org/docker",
+                    },
+                    {
+                      name: "Kubernetes",
+                      iconUrl: "https://cdn.simpleicons.org/kubernetes",
+                    },
+                    {
+                      name: "Jenkins",
+                      iconUrl: "https://cdn.simpleicons.org/jenkins",
+                    },
+                  ],
+                },
+                {
+                  title: "INTELLIGENCE ARTIFICIELLE",
+                  skills: [
+                    {
+                      name: "OpenAI API",
+                      iconUrl: "https://cdn.simpleicons.org/openai",
+                    },
+                    {
+                      name: "Cursor",
+                      iconUrl:
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrQ_CU3a6muH84mLfoP6xmM4ZJ9Z6RAXMmdA&s",
+                    },
+                    {
+                      name: "Google Antigravity",
+                      iconUrl:
+                        "https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/google-antigravity-logo-icon.png",
+                    },
+                    { name: "v0", iconUrl: "/logo/v0.png" },
+                    {
+                      name: "CodeRabbit",
+                      iconUrl: "https://cdn.simpleicons.org/coderabbit",
+                    },
+                    {
+                      name: "Trunk Code Quality",
+                      iconUrl:
+                        "https://trunk.gallerycdn.vsassets.io/extensions/trunk/io/3.21.1/1758614980446/Microsoft.VisualStudio.Services.Icons.Default",
+                    },
+                  ],
+                },
+                {
+                  title: "OUTILS DE PRODUCTIVITÉ",
+                  skills: [
+                    {
+                      name: "Notion",
+                      iconUrl: "https://cdn.simpleicons.org/notion",
+                    },
+                    {
+                      name: "Obsidian",
+                      iconUrl: "https://cdn.simpleicons.org/obsidian",
+                    },
+                    {
+                      name: "GitHub",
+                      iconUrl:
+                        "https://cdn.worldvectorlogo.com/logos/github-icon-2.svg",
+                    },
+                    {
+                      name: "Teams",
+                      iconUrl:
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Microsoft_Office_Teams_%282019%E2%80%932025%29.svg/1200px-Microsoft_Office_Teams_%282019%E2%80%932025%29.svg.png",
+                    },
+                    {
+                      name: "Slack",
+                      iconUrl:
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/1200px-Slack_icon_2019.svg.png",
+                    },
+                    {
+                      name: "Linear",
+                      iconUrl: "https://cdn.simpleicons.org/linear",
+                    },
+                    {
+                      name: "Trello",
+                      iconUrl: "https://cdn.simpleicons.org/trello",
+                    },
+                    {
+                      name: "Figma",
+                      iconUrl:
+                        "https://brandlogos.net/wp-content/uploads/2022/05/figma-logo_brandlogos.net_6n1pb-512x512.png",
+                    },
+                  ],
+                },
+                {
+                  title: "QUALITÉS",
+                  skills: [
+                    { name: "Compréhensif", iconUrl: "" },
+                    { name: "Responsable", iconUrl: "" },
+                    { name: "Adaptatif", iconUrl: "" },
+                    { name: "Autonome", iconUrl: "" },
+                    { name: "Sociable", iconUrl: "" },
+                    { name: "Esprit collectif", iconUrl: "" },
+                    { name: "Organisé", iconUrl: "" },
+                  ],
+                },
+              ].map((category, categoryIndex) => (
+                <div key={categoryIndex} className="space-y-6">
+                  <div>
+                    <h3 className="text-sm text-muted-foreground font-mono mb-4">
+                      {category.title}
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {category.skills.map((skill) => (
+                        <span
+                          key={skill.name}
+                          className={`group px-3 py-1.5 text-sm border border-border rounded-full hover:border-muted-foreground/50 transition-all duration-300 flex items-center gap-2 ${
+                            category.title === "QUALITÉS" ? "bg-muted/50" : ""
+                          }`}
+                        >
+                          {skill.iconUrl && (
+                            <img
+                              src={skill.iconUrl}
+                              alt={skill.name}
+                              className="w-4 h-4 group-hover:scale-110 transition-transform duration-300"
+                            />
+                          )}
+                          <span>{skill.name}</span>
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-
-                <div>
-                  <h3 className="text-sm text-muted-foreground font-mono mb-4">
-                    BASES DE DONNÉES & BACKEND
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {[
-                      "MongoDB",
-                      "PostgreSQL",
-                      "Firebase",
-                      "Supabase",
-                      "Node.js",
-                      "Bun",
-                    ].map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1.5 text-sm border border-border rounded-full hover:border-muted-foreground/50 transition-colors duration-300"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-sm text-muted-foreground font-mono mb-4">
-                    DEVOPS & GESTION DE VERSIONS
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {[
-                      "Git",
-                      "GitHub",
-                      "Linux",
-                      "Docker",
-                      "Kubernetes",
-                      "Jenkins",
-                    ].map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1.5 text-sm border border-border rounded-full hover:border-muted-foreground/50 transition-colors duration-300"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-sm text-muted-foreground font-mono mb-4">
-                    INTELLIGENCE ARTIFICIELLE
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {[
-                      "OpenAI API",
-                      "Cursor",
-                      "Google Antigravity",
-                      "v0",
-                      "CodeRabbit",
-                      "Trunk Code Quality",
-                    ].map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1.5 text-sm border border-border rounded-full hover:border-muted-foreground/50 transition-colors duration-300"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-sm text-muted-foreground font-mono mb-4">
-                    OUTILS DE PRODUCTIVITÉ
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {[
-                      "Notion",
-                      "Obsidian",
-                      "GitHub",
-                      "Teams",
-                      "Slack",
-                      "Linear",
-                      "Trello",
-                      "Figma",
-                    ].map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1.5 text-sm border border-border rounded-full hover:border-muted-foreground/50 transition-colors duration-300"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-sm text-muted-foreground font-mono mb-4">
-                    QUALITÉS
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {[
-                      "Compréhensif",
-                      "Responsable",
-                      "Adaptatif",
-                      "Autonome",
-                      "Sociable",
-                      "Esprit collectif",
-                      "Organisé",
-                    ].map((quality) => (
-                      <span
-                        key={quality}
-                        className="px-3 py-1.5 text-sm bg-muted/50 rounded-full"
-                      >
-                        {quality}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -863,6 +942,7 @@ export default function Home() {
 
                 <div className="space-y-4">
                   <Link
+                    target="_blank"
                     href="mailto:pro@andritiana.tech"
                     className="group flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors duration-300"
                   >
@@ -903,14 +983,23 @@ export default function Home() {
                   {
                     name: "LinkedIn",
                     handle: "andritiana",
-                    url: "https://linkedin.com",
+                    url: "https://www.linkedin.com/in/andritianaa/",
                   },
-                  { name: "ComeUp", handle: "@andritianaa", url: "#" },
-                  { name: "Instagram", handle: "@andritianaa", url: "#" },
+                  {
+                    name: "ComeUp",
+                    handle: "@andritiana-steve",
+                    url: "https://comeup.com/fr/@andritiana-steve",
+                  },
+                  {
+                    name: "Whatsapp",
+                    handle: "+261 32 67 082 11",
+                    url: "https://wa.me/261326708211",
+                  },
                 ].map((social) => (
                   <Link
                     key={social.name}
                     href={social.url}
+                    target="_blank"
                     className="group p-4 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-300 hover:shadow-sm"
                   >
                     <div className="space-y-2">
