@@ -581,7 +581,6 @@ export default function Home() {
                     src: "/galerie/5.jpg",
                     alt: "Workshop sur le thème du DevOps",
                   },
-                  { src: "/galerie/1.jpg", alt: "Le Staff du GDSC ISPM 2023" },
                 ];
 
                 const column1 = photos.filter((_, i) => i % 2 === 0);
