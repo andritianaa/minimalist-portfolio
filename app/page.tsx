@@ -130,7 +130,7 @@ export default function Home() {
                 </div>
                 <div className="space-y-2">
                   <div className="text-foreground">
-                    Lead Développeur Fullstack
+                    Développeur Fullstack
                   </div>
                   <div className="text-muted-foreground">À Teratany</div>
                   <div className="text-xs text-muted-foreground">
@@ -296,11 +296,11 @@ export default function Home() {
               {[
                 {
                   year: "Mai 2022 — Présent",
-                  role: "Lead Développeur Fullstack",
+                  role: "Développeur Fullstack",
                   company: "Teratany",
                   location: "Antananarivo",
                   description:
-                    "Lead développeur fullstack et DevOPS à Teratany. Création du réseau social Teratany dédié aux ODD et de Hevitro.mg, plateforme citoyenne centralisant idées et doléances pour Madagascar.",
+                    "Développeur Fullstack et DevOPS à Teratany. Création du réseau social Teratany dédié aux ODD et de Hevitro.mg, plateforme citoyenne centralisant idées et doléances pour Madagascar.",
                   tech: [
                     "Next.js",
                     "TypeScript",
@@ -337,7 +337,7 @@ export default function Home() {
                 },
                 {
                   year: "Août 2024 — Mars 2025",
-                  role: "Lead Développeur Fullstack",
+                  role: "Développeur Fullstack",
                   company: "Pandorra.ai",
                   location: "Distantiel (Canada)",
                   description:
