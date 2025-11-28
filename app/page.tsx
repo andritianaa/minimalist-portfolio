@@ -15,25 +15,28 @@ export default function Home() {
     document.documentElement.classList.toggle("dark", isDark);
   }, [isDark]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fade-in-up");
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.3, rootMargin: "0px 0px -20% 0px" }
-    );
+ useEffect(() => {
+   const observer = new IntersectionObserver(
+     (entries) => {
+       entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+           entry.target.classList.add("animate-fade-in-up");
+           setActiveSection(entry.target.id);
+         }
+       });
+     },
+     {
+       threshold: 0.1, // Réduit de 0.3 à 0.1 pour mobile
+       rootMargin: "0px 0px -10% 0px", // Réduit de -20% à -10%
+     }
+   );
 
-    sectionsRef.current.forEach((section) => {
-      if (section) observer.observe(section);
-    });
+   sectionsRef.current.forEach((section) => {
+     if (section) observer.observe(section);
+   });
 
-    return () => observer.disconnect();
-  }, []);
+   return () => observer.disconnect();
+ }, []);
 
   const toggleTheme = () => {
     setIsDark(!isDark);
@@ -565,12 +568,11 @@ export default function Home() {
             <div className="flex flex-wrap lg:flex-nowrap gap-4">
               {(() => {
                 const photos = [
-                  { src: "/galerie/1.jpg", alt: "Le Staff du GDSC ISPM 2023" },
+                  { src: "/galerie/3.jpg", alt: "Sortie de promotion" },
                   {
                     src: "/galerie/2.jpg",
                     alt: "Prise de parole lors de l'info session GDSC ISPM",
                   },
-                  { src: "/galerie/3.jpg", alt: "Sortie de promotion" },
                   {
                     src: "/galerie/4.jpg",
                     alt: "Mon Setup",
@@ -579,6 +581,7 @@ export default function Home() {
                     src: "/galerie/5.jpg",
                     alt: "Workshop sur le thème du DevOps",
                   },
+                  { src: "/galerie/1.jpg", alt: "Le Staff du GDSC ISPM 2023" },
                 ];
 
                 const column1 = photos.filter((_, i) => i % 2 === 0);
