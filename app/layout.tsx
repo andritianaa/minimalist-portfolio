@@ -10,10 +10,37 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: "Andritiana Steve Rakotonimanana - HubSpot CMS Developer",
-  description: "HubSpot CMS Developer from Philippines with 5 years of experience.",
-  generator: "v0.app",
-}
+  title: "Andritiana Steve Rakotonimanana - Développeur fullstack",
+  description: "Développeur fullstack de Madagascar avec 4 ans d'expérience.",
+  creator: "Andritiana Steve Rakotonimanana",
+  publisher: "Andritiana Steve Rakotonimanana",
+  keywords: [
+    "développeur fullstack",
+    "Madagascar",
+    "React",
+    "Next.js",
+    "Node.js",
+    "TypeScript",
+    "JavaScript",
+    "développement web",
+    "portfolio",
+  ],
+  authors: [{ name: "Andritiana Steve Rakotonimanana" }],
+  openGraph: {
+    images: "/og.png",
+    title: "Andritiana Steve Rakotonimanana - Développeur fullstack",
+    description: "Développeur fullstack de Madagascar avec 4 ans d'expérience.",
+    url: "http://andritiana.tech/",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Andritiana Steve Rakotonimanana - Développeur fullstack",
+    description: "Développeur fullstack de Madagascar avec 4 ans d'expérience.",
+    creator: "@AndritianaSteve", // Replace with actual Twitter handle if available
+    images: ["/og.png"],
+  },
+};
 
 export default function RootLayout({
   children,
