@@ -15,28 +15,28 @@ export default function Home() {
     document.documentElement.classList.toggle("dark", isDark);
   }, [isDark]);
 
- useEffect(() => {
-   const observer = new IntersectionObserver(
-     (entries) => {
-       entries.forEach((entry) => {
-         if (entry.isIntersecting) {
-           entry.target.classList.add("animate-fade-in-up");
-           setActiveSection(entry.target.id);
-         }
-       });
-     },
-     {
-       threshold: 0.1, // Réduit de 0.3 à 0.1 pour mobile
-       rootMargin: "0px 0px -10% 0px", // Réduit de -20% à -10%
-     }
-   );
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fade-in-up");
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Réduit de 0.3 à 0.1 pour mobile
+        rootMargin: "0px 0px -10% 0px", // Réduit de -20% à -10%
+      }
+    );
 
-   sectionsRef.current.forEach((section) => {
-     if (section) observer.observe(section);
-   });
+    sectionsRef.current.forEach((section) => {
+      if (section) observer.observe(section);
+    });
 
-   return () => observer.disconnect();
- }, []);
+    return () => observer.disconnect();
+  }, []);
 
   const toggleTheme = () => {
     setIsDark(!isDark);
@@ -56,6 +56,35 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative">
+      {/* Theme Toggle Button */}
+      <button
+        onClick={toggleTheme}
+        className="fixed top-8 right-8 z-20 group p-3 rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-300"
+        aria-label="Changer le thème"
+      >
+        {isDark ? (
+          <svg
+            className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fillRule="evenodd"
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              clipRule="evenodd"
+            />
+          </svg>
+        ) : (
+          <svg
+            className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+          </svg>
+        )}
+      </button>
+
       <nav className="fixed left-8 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
         <div className="flex flex-col gap-4">
           {sections.map((section) => (
@@ -75,7 +104,8 @@ export default function Home() {
                 }`}
                 aria-label={`Naviguer vers ${section.label}`}
               />
-              {hoveredSection === section.id && (
+              {(hoveredSection === section.id ||
+                activeSection === section.id) && (
                 <div className="absolute left-6 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-foreground text-background text-sm rounded whitespace-nowrap shadow-lg animate-fade-in">
                   {section.label}
                 </div>
@@ -132,12 +162,10 @@ export default function Home() {
                   ACTUELLEMENT
                 </div>
                 <div className="space-y-2">
-                  <div className="text-foreground">
-                    Développeur Fullstack
-                  </div>
+                  <div className="text-foreground">Développeur Fullstack</div>
                   <div className="text-muted-foreground">À Teratany</div>
                   <div className="text-xs text-muted-foreground">
-                    05/2022 — Aujourd'hui
+                    2022 — Aujourd'hui
                   </div>
                 </div>
               </div>
@@ -291,14 +319,14 @@ export default function Home() {
                 Expériences Professionnelles
               </h2>
               <div className="text-sm text-muted-foreground font-mono">
-                Fev. 2022 — Maintenant (4ans)
+                2022 — Maintenant (4ans)
               </div>
             </div>
 
             <div className="space-y-8 sm:space-y-12">
               {[
                 {
-                  year: "Mai 2022 — Présent",
+                  year: "2022 — Présent",
                   role: "Développeur Fullstack",
                   company: "Teratany",
                   location: "Antananarivo",
@@ -315,7 +343,7 @@ export default function Home() {
                   ],
                 },
                 {
-                  year: "Nov. 2022 — Présent",
+                  year: "2022 — Présent",
                   role: "Développeur Fullstack Freelance",
                   company: "ComeUp",
                   location: "Distantiel",
@@ -330,7 +358,7 @@ export default function Home() {
                   ],
                 },
                 {
-                  year: "Juin 2025",
+                  year: "2025",
                   role: "Développeur Freelance",
                   company: "Tiakaly",
                   location: "Antananarivo",
@@ -339,7 +367,7 @@ export default function Home() {
                   tech: ["Next.js", "Shadcn", "PostgreSQL", "Leaflet"],
                 },
                 {
-                  year: "Août 2024 — Mars 2025",
+                  year: "2024 — 2025",
                   role: "Développeur Fullstack",
                   company: "Pandorra.ai",
                   location: "Distantiel (Canada)",
@@ -354,7 +382,7 @@ export default function Home() {
                   ],
                 },
                 {
-                  year: "Nov. 2023 — Jan. 2024",
+                  year: "2023 — 2024",
                   role: "Consultant Développeur Front",
                   company: "Sowell",
                   location: "Antananarivo",
@@ -369,7 +397,7 @@ export default function Home() {
                   ],
                 },
                 {
-                  year: "Avril 2023",
+                  year: "2023",
                   role: "Développeur bénévole",
                   company: "Institut Supérieur Polytechnique de Madagascar",
                   location: "Antananarivo",
@@ -378,7 +406,7 @@ export default function Home() {
                   tech: ["Socket.io", "NodeJS", "React", "MongoDB", "Redis"],
                 },
                 {
-                  year: "Fev. 2022 — Mai 2022",
+                  year: "2022",
                   role: "Stagiaire Développeur Fullstack",
                   company: "Le Petit Nid",
                   location: "Antananarivo",
@@ -602,7 +630,9 @@ export default function Home() {
                             className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500"
                           />
                           <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                            <span className="text-sm text-foreground">{photo.alt}</span>
+                            <span className="text-sm text-foreground">
+                              {photo.alt}
+                            </span>
                           </div>
                         </div>
                       ))}
@@ -621,7 +651,9 @@ export default function Home() {
                             className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500"
                           />
                           <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                            <span className="text-sm text-foreground">{photo.alt}</span>
+                            <span className="text-sm text-foreground">
+                              {photo.alt}
+                            </span>
                           </div>
                         </div>
                       ))}
@@ -1151,36 +1183,6 @@ export default function Home() {
               <div className="text-xs text-muted-foreground">
                 Développé avec passion à Madagascar
               </div>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <button
-                onClick={toggleTheme}
-                className="group p-3 rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-300"
-                aria-label="Changer le thème"
-              >
-                {isDark ? (
-                  <svg
-                    className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-                  </svg>
-                )}
-              </button>
             </div>
           </div>
         </footer>
