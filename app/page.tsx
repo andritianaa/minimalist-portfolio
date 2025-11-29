@@ -261,10 +261,10 @@ export default function Home() {
                   <div className="space-y-2">
                     <Link
                       target="_blank"
-                      href="mailto:pro@andritiana.tech"
+                      href="mailto:andritianasteve@gmail.com"
                       className="flex items-center gap-2 text-foreground hover:text-muted-foreground transition-colors"
                     >
-                      <span>pro@andritiana.tech</span>
+                      <span>andritianasteve@gmail.com</span>
                     </Link>
                     <div className="text-muted-foreground">0386231963</div>
                     <div className="text-muted-foreground text-sm">
@@ -1068,11 +1068,11 @@ export default function Home() {
                 <div className="space-y-4">
                   <Link
                     target="_blank"
-                    href="mailto:pro@andritiana.tech"
+                    href="mailto:andritianasteve@gmail.com"
                     className="group flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors duration-300"
                   >
                     <span className="text-base sm:text-lg">
-                      pro@andritiana.tech
+                      andritianasteve@gmail.com
                     </span>
                     <svg
                       className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
