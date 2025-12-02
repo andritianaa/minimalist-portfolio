@@ -930,7 +930,7 @@ export default function Home() {
                     {
                       name: "Teams",
                       iconUrl:
-                        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Microsoft_Office_Teams_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_Teams_%282019%E2%80%93present%29.svg.png",
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Microsoft_Office_Teams_%282019%E2%80%932025%29.svg/1200px-Microsoft_Office_Teams_%282019%E2%80%932025%29.svg.png",
                     },
                     {
                       name: "Slack",
@@ -979,7 +979,7 @@ export default function Home() {
                           }`}
                         >
                           {skill.iconUrl && (
-                            <img
+                            <Image
                               src={skill.iconUrl}
                               alt={skill.name}
                               className="w-4 h-4 group-hover:scale-110 transition-transform duration-300"
