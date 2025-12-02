@@ -26,8 +26,8 @@ export default function Home() {
         });
       },
       {
-        threshold: 0.1, // Réduit de 0.3 à 0.1 pour mobile
-        rootMargin: "0px 0px -10% 0px", // Réduit de -20% à -10%
+        threshold: 0.1,
+        rootMargin: "0px 0px -10% 0px",
       }
     );
 
@@ -530,6 +530,10 @@ export default function Home() {
                       className="absolute inset-0 object-cover"
                       width={1200}
                       height={500}
+                      loading={index < 2 ? "eager" : "lazy"}
+                      priority={index < 2}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      quality={85}
                     />
                   </div>
 
@@ -625,9 +629,12 @@ export default function Home() {
                           <Image
                             src={photo.src}
                             alt={photo.alt}
-                            width={1200} // Example width, adjust as needed
-                            height={800} // Example height, adjust as needed to maintain aspect ratio
+                            width={1200}
+                            height={800}
                             className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy"
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                            quality={80}
                           />
                           <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                             <span className="text-sm text-foreground">
@@ -646,9 +653,12 @@ export default function Home() {
                           <Image
                             src={photo.src}
                             alt={photo.alt}
-                            width={1200} // Example width, adjust as needed
-                            height={800} // Example height, adjust as needed to maintain aspect ratio
+                            width={1200}
+                            height={800}
                             className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy"
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                            quality={80}
                           />
                           <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                             <span className="text-sm text-foreground">
@@ -920,7 +930,7 @@ export default function Home() {
                     {
                       name: "Teams",
                       iconUrl:
-                        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Microsoft_Office_Teams_%282019%E2%80%932025%29.svg/1200px-Microsoft_Office_Teams_%282019%E2%80%932025%29.svg.png",
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Microsoft_Office_Teams_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_Teams_%282019%E2%80%93present%29.svg.png",
                     },
                     {
                       name: "Slack",
@@ -973,6 +983,9 @@ export default function Home() {
                               src={skill.iconUrl}
                               alt={skill.name}
                               className="w-4 h-4 group-hover:scale-110 transition-transform duration-300"
+                              loading="lazy"
+                              width={16}
+                              height={16}
                             />
                           )}
                           <span>{skill.name}</span>
@@ -1188,9 +1201,7 @@ export default function Home() {
         </footer>
       </main>
 
-      <div className="fixed bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none"></div>
+      <div className="fixed bottom-0 left-0 right-0 h-24 bg-linear-to-t from-background via-background/80 to-transparent pointer-events-none"></div>
     </div>
   );
 }
-
-
