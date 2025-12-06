@@ -1,9 +1,10 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-import { Button } from "@/components/ui/button";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
+
+import { Button } from '@/components/ui/button';
 
 export default function Home() {
   const [isDark, setIsDark] = useState(true);
@@ -327,11 +328,11 @@ export default function Home() {
               {[
                 {
                   year: "2022 — Présent",
-                  role: "Développeur Fullstack",
+                  role: "Lead Développeur Fullstack",
                   company: "Teratany",
                   location: "Antananarivo",
                   description:
-                    "Développeur Fullstack et DevOPS à Teratany. Création du réseau social Teratany dédié aux ODD et de Hevitro.mg, plateforme citoyenne centralisant idées et doléances pour Madagascar.",
+                    "Développeur Fullstack et DevOPS à Teratany. Création du réseau social Teratany dédié aux ODD, de Hevitro.mg, plateforme citoyenne centralisant idées et doléances pour Madagascar ainsi que de plusieurs outils en interne et une application de gestion d'école.",
                   tech: [
                     "Next.js",
                     "TypeScript",
@@ -343,7 +344,7 @@ export default function Home() {
                   ],
                 },
                 {
-                  year: "2022 — Présent",
+                  year: "Nov 2022 — Juillet 2025",
                   role: "Développeur Fullstack Freelance",
                   company: "ComeUp",
                   location: "Distantiel",
