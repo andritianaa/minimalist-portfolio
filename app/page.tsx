@@ -295,7 +295,7 @@ export default function Home() {
                     >
                       <span>andritianasteve@gmail.com</span>
                     </Link>
-                    <div className="text-muted-foreground">0386231963</div>
+                    <div className="text-muted-foreground">+261 32 67 082 11</div>
                     <div className="text-muted-foreground text-sm">
                       Lot 141 A Ikianja Ambohimangakely
                     </div>
@@ -1134,7 +1134,7 @@ export default function Home() {
                       />
                     </svg>
                   </Link>
-                  <div className="text-muted-foreground">0386231963</div>
+                  <div className="text-muted-foreground">+261 32 67 082 11</div>
                 </div>
               </div>
             </div>
