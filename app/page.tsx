@@ -129,7 +129,7 @@ export default function Home() {
             <div className="lg:col-span-3 space-y-6 sm:space-y-8">
               <div className="space-y-3 sm:space-y-2">
                 <div className="text-sm text-muted-foreground font-mono tracking-wider">
-                  PORTFOLIO / 2025
+                  PORTFOLIO / 2026
                 </div>
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight">
                   Andritiana
@@ -157,16 +157,16 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:col-span-2 flex flex-col justify-end space-y-6 sm:space-y-8 mt-8 lg:mt-0">
+            <div className="lg:col-span-2 flex flex-col justify-start space-y-6 sm:space-y-8 mt-8 lg:mt-0">
               <div className="space-y-4">
                 <div className="text-sm text-muted-foreground font-mono">
                   ACTUELLEMENT
                 </div>
                 <div className="space-y-2">
-                  <div className="text-foreground">Développeur Fullstack</div>
-                  <div className="text-muted-foreground">À Teratany</div>
+                  <div className="text-foreground">Ouvert à des opportunités</div>
+                  <div className="text-muted-foreground">Développement web</div>
                   <div className="text-xs text-muted-foreground">
-                    2022 — 2025
+                    4 ans d'expérience fevrier 2022 — maintenant
                   </div>
                 </div>
               </div>
@@ -327,7 +327,7 @@ export default function Home() {
             <div className="space-y-8 sm:space-y-12">
               {[
                 {
-                  year: "2022 — Présent",
+                  year: "2022 — 2025",
                   role: "Lead Développeur Fullstack",
                   company: "Teratany",
                   location: "Antananarivo",
@@ -344,7 +344,7 @@ export default function Home() {
                   ],
                 },
                 {
-                  year: "Nov 2022 — Juillet 2025",
+                  year: "2022 — 2025",
                   role: "Développeur Fullstack Freelance",
                   company: "ComeUp",
                   location: "Distantiel",
