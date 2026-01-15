@@ -535,6 +535,7 @@ export default function Home() {
                       priority={index < 2}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                       quality={85}
+                      
                     />
                   </div>
 
@@ -987,6 +988,7 @@ export default function Home() {
                               loading="lazy"
                               width={16}
                               height={16}
+                              unoptimized
                             />
                           )}
                           <span>{skill.name}</span>
