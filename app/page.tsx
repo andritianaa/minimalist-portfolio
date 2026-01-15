@@ -166,7 +166,7 @@ export default function Home() {
                   <div className="text-foreground">Développeur Fullstack</div>
                   <div className="text-muted-foreground">À Teratany</div>
                   <div className="text-xs text-muted-foreground">
-                    2022 — Aujourd'hui
+                    2022 — 2025
                   </div>
                 </div>
               </div>
