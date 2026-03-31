@@ -394,6 +394,76 @@
   ],
   "publications": [
     {
+      "title": "Officiellement Ingénieur en Informatique et Télécommunications !",
+      "excerpt": "C'est avec une immense émotion que j'ai soutenu mon projet de fin d'études à l'ISPM. Le Pr RABOANARY Roland a qualifié ma présentation de « Masterclass technique ».",
+      "date": "Fev 2026",
+      "readTime": "3 min",
+      "link": "https://www.linkedin.com/feed/update/urn:li:share:7434115894135451648"
+    },
+    {
+      "title": "Je crois que je viens d'ouvrir le livre le plus « dangereux » de ma bibliothèque.",
+      "excerpt": "Quand un auteur te conseille de consulter un médecin, un avocat ET une personne de bon sens avant même le chapitre 1, tu sais que ce n'est pas un livre de comptabilité.",
+      "date": "Fev 2026",
+      "readTime": "2 min",
+      "link": "https://www.linkedin.com/feed/update/urn:li:share:7432762218603024386"
+    },
+    {
+      "title": "7 jours, 7 types de bases de données — Jour 6",
+      "excerpt": "Sixième jour de la série : découverte d'un nouveau type de base de données.",
+      "date": "Jan 2026",
+      "readTime": "2 min",
+      "link": "https://www.linkedin.com/posts/andritianaa_7-jours-7-types-de-bases-de-donn%C3%A9es-jour-activity-7420437538059952129-YhgB?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+    },
+    {
+      "title": "7 jours, 7 types de bases de données — Jour 5",
+      "excerpt": "Cinquième jour de la série : découverte d'un nouveau type de base de données.",
+      "date": "Jan 2026",
+      "readTime": "2 min",
+      "link": "https://www.linkedin.com/posts/andritianaa_7-jours-7-types-de-bases-de-donn%C3%A9es-jour-activity-7419998377175760897-R3VV?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+    },
+    {
+      "title": "7 jours, 7 types de bases de données — Jour 4",
+      "excerpt": "Quatrième jour de la série : découverte d'un nouveau type de base de données.",
+      "date": "Jan 2026",
+      "readTime": "2 min",
+      "link": "https://www.linkedin.com/posts/andritianaa_7-jours-7-types-de-bases-de-donn%C3%A9es-jour-activity-7419612901784834048-rTdk?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+    },
+    {
+      "title": "7 jours, 7 types de bases de données — Jour 3",
+      "excerpt": "Troisième jour de la série : découverte d'un nouveau type de base de données.",
+      "date": "Jan 2026",
+      "readTime": "2 min",
+      "link": "https://www.linkedin.com/posts/andritianaa_7-jours-7-types-de-bases-de-donn%C3%A9es-jour-activity-7419306514651418625-CHzI?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+    },
+    {
+      "title": "7 jours, 7 types de bases de données — Jour 2",
+      "excerpt": "Deuxième jour de la série : découverte d'un nouveau type de base de données.",
+      "date": "Jan 2026",
+      "readTime": "2 min",
+      "link": "https://www.linkedin.com/posts/andritianaa_7-jours-7-types-de-bases-de-donn%C3%A9es-jour-activity-7418981511548477440-SMYS?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+    },
+    {
+      "title": "7 jours, 7 types de bases de données — Jour 1",
+      "excerpt": "Premier jour de la série : découverte d'un nouveau type de base de données.",
+      "date": "Jan 2026",
+      "readTime": "2 min",
+      "link": "https://www.linkedin.com/posts/andritianaa_7-jours-7-types-de-bases-de-donn%C3%A9es-jour-activity-7418599790571089920-4UK3?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+    },
+    {
+      "title": "Backend, Architecture & SQL",
+      "excerpt": "Retour sur les fondamentaux du backend : architecture, patterns et bases de données relationnelles.",
+      "date": "Jan 2026",
+      "readTime": "2 min",
+      "link": "https://www.linkedin.com/posts/andritianaa_backend-architecture-sql-activity-7418215509332172800-YUoF?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+    },
+    {
+      "title": "Le 1er janvier, il y a trois types de développeurs",
+      "excerpt": "Le 1er janvier, il y a trois types de développeurs — et tu appartiens probablement à l'un d'eux.",
+      "date": "Jan 2026",
+      "readTime": "2 min",
+      "link": "https://www.linkedin.com/posts/andritianaa_le-1er-janvier-il-y-a-trois-types-de-d%C3%A9veloppeurs-activity-7417816887679627265-MsF3?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+    },
+    {
       "title": "Et si la voix du peuple trouvait enfin un écho ?",
       "excerpt": "Ces dernières semaines, en suivant l'actualité à Madagascar, j'ai vu défiler des centaines de publications sur Facebook.",
       "date": "Nov 2025",
@@ -440,8 +510,8 @@
     },
     {
       "name": "Whatsapp",
-      "handle": "+261 38 62 319 63",
-      "url": "https://wa.me/261386231963"
+      "handle": "+261 32 67 082 11",
+      "url": "https://wa.me/261326708211"
     }
   ]
 }
