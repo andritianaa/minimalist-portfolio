@@ -30,9 +30,8 @@
   },
   "about": {
     "paragraphs": [
-      "Le code est un outil, l'architecture est une stratégie. Software Engineer avec une solide culture Fullstack, je me spécialise dans la conception de systèmes robustes sous TypeScript (Node.js, Bun) et Golang — avec un focus sur la Clean Architecture et le Domain-Driven Design.",
-      "Mon objectif : bâtir des moteurs performants, capables de supporter la charge et d'accompagner la croissance d'un produit sur le long terme — sans que l'infrastructure ne devienne un goulot d'étranglement.",
-      "Ma culture Fullstack est un atout stratégique : concevoir des APIs parfaitement alignées avec les besoins du Frontend fluidifie le travail des équipes et accélère le Time-to-Market."
+      "Le code est un outil, l'architecture est une stratégie. Je me spécialise dans la conception de systèmes robustes sous TypeScript et Golang — avec un focus sur la Clean Architecture et le Domain-Driven Design.",
+      "Ma culture Fullstack est un atout stratégique : des APIs alignées avec les besoins Frontend, des moteurs backend performants, capables d'accompagner la croissance d'un produit sur le long terme."
     ],
     "education": [
       {
