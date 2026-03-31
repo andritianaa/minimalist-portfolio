@@ -19,16 +19,20 @@ A clean, modern portfolio website built with Next.js and Tailwind CSS, featuring
 
 ## 📦 Getting Started
 
-\`\`\`bash
+```bash
+
 # Clone the repository
+
 git clone https://github.com/andritianaa/portfolio.git
 
 # Install dependencies
+
 npm install
 
 # Run development server
+
 npm run dev
-\`\`\`
+```
 
 Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
 
@@ -39,11 +43,3 @@ The portfolio is designed to be easily customizable:
 - Update personal information in `app/page.tsx`
 - Modify colors and styling in `app/globals.css`
 - Add or remove sections as needed
-
-## 📄 License
-
-Open source and available under the [MIT License](LICENSE).
-
----
-
-**Built with ❤️ using [v0.dev](https://v0.dev) by Andritiana Steve Rakotonimanana**

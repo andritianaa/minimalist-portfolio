@@ -1,0 +1,447 @@
+{
+  "meta": {
+    "year": "2026",
+    "copyright": "© 2026 Andritiana Steve Rakotonimanana. Tous droits réservés.",
+    "madeIn": "Développé avec passion à Madagascar"
+  },
+  "hero": {
+    "firstName": "Andritiana",
+    "lastName": "Steve",
+    "tagline": "Software Engineer spécialisé Backend, guidé par la logique pure et le souci de l'architecture — concevant des systèmes",
+    "highlights": ["robustes", "performants", "évolutifs"],
+    "availability": "Disponible pour de nouveaux projets",
+    "location": "Antananarivo, Madagascar",
+    "current": {
+      "status": "Ouvert à des opportunités",
+      "domain": "Développement Backend & Architecture",
+      "experience": "4 ans d'expérience · février 2022 — maintenant"
+    },
+    "expertise": [
+      "TypeScript",
+      "Node.js",
+      "Bun",
+      "Golang",
+      "NestJS",
+      "DDD",
+      "Clean Architecture",
+      "Base de données"
+    ],
+    "cvPath": "/CV-Andritiana-Steve-Rakotonimanana.pdf"
+  },
+  "about": {
+    "paragraphs": [
+      "Le code est un outil, l'architecture est une stratégie. Software Engineer avec une solide culture Fullstack, je me spécialise dans la conception de systèmes robustes sous TypeScript (Node.js, Bun) et Golang — avec un focus sur la Clean Architecture et le Domain-Driven Design.",
+      "Mon objectif : bâtir des moteurs performants, capables de supporter la charge et d'accompagner la croissance d'un produit sur le long terme — sans que l'infrastructure ne devienne un goulot d'étranglement.",
+      "Ma culture Fullstack est un atout stratégique : concevoir des APIs parfaitement alignées avec les besoins du Frontend fluidifie le travail des équipes et accélère le Time-to-Market."
+    ],
+    "education": [
+      {
+        "degree": "Master II en Informatique",
+        "school": "IMTICIA - ISPM",
+        "period": "2023 — 2024"
+      },
+      {
+        "degree": "Licence en Informatique",
+        "school": "IMTICIA - ISPM",
+        "period": "2019 — 2022"
+      },
+      {
+        "degree": "Baccalauréat Série D",
+        "school": "Le Petit Nid Soavimbahoaka",
+        "period": "2018"
+      }
+    ],
+    "contact": {
+      "email": "andritianasteve@gmail.com",
+      "phone": "+261 38 62 319 63",
+      "address": "Lot 141 A Ikianja Ambohimangakely"
+    }
+  },
+  "experience": {
+    "period": "2022 — Maintenant (4 ans)",
+    "jobs": [
+      {
+        "year": "2022 — 2026",
+        "role": "Lead Développeur Fullstack · Pilier Backend",
+        "company": "Teratany",
+        "location": "Antananarivo",
+        "description": "Ownership technique complet sur le réseau social Teratany (ODD) et Hevitro.mg (plateforme citoyenne KYC). Responsabilité principale sur l'architecture backend, les APIs REST, la gestion des bases de données et l'optimisation des performances. Mise en place de l'infrastructure DevOps : pipelines CI/CD, orchestration Kubernetes, containerisation Docker.",
+        "tech": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Kubernetes",
+          "Docker",
+          "Redis",
+          "Next.js"
+        ]
+      },
+      {
+        "year": "2022 — Maintenant",
+        "role": "Développeur Fullstack Freelance",
+        "company": "ComeUp - Malt",
+        "location": "Distantiel",
+        "description": "Développement de solutions pour une trentaine de clients sur des projets variés — avec un focus naturel sur la conception d'APIs robustes, la modélisation de bases de données et les intégrations backend. Livraison de produits maintenables de bout en bout.",
+        "tech": [
+          "Node.js",
+          "Bun",
+          "Golang",
+          "NestJS",
+          "MongoDB",
+          "PostgreSQL",
+          "Express",
+          "Docker",
+          "Redis",
+          "Next.js"
+        ]
+      },
+      {
+        "year": "2024 — 2025",
+        "role": "Lead Développeur · Backend & Intégrations IA",
+        "company": "Pandorra.ai",
+        "location": "Distantiel (Canada)",
+        "description": "Développement d'une plateforme créative IA : orchestration des appels vers les APIs d'IA (OpenAI, Runway ML, ElevenLabs), gestion des files de traitement asynchrone, conception du système de facturation et des quotas utilisateurs.",
+        "tech": [
+          "NestJS",
+          "TypeScript",
+          "PostgreSQL",
+          "OpenAI",
+          "Runway ML",
+          "ElevenLabs",
+          "BullMQ"
+        ]
+      },
+      {
+        "year": "2025",
+        "role": "Développeur Backend",
+        "company": "Tiakaly",
+        "location": "Antananarivo",
+        "description": "Conception du backend et de la base de données pour une plateforme de spots géolocalisés. API de gestion des points d'intérêt avec intégration cartographique.",
+        "tech": ["NestJS", "PostgreSQL", "PostGIS", "Next.js", "Leaflet"]
+      },
+      {
+        "year": "2023 — 2024",
+        "role": "Développeur Frontend / QA",
+        "company": "Sowell",
+        "location": "Antananarivo",
+        "description": "Développement frontend et mise en place de la stratégie de tests automatisés (E2E et intégration) sur une solution de gestion de patrimoine. Collaboration étroite avec les équipes backend pour garantir la cohérence des contrats d'API.",
+        "tech": ["Vue", "TypeScript", "Cypress", "Playwright", "Linear"]
+      },
+      {
+        "year": "2023",
+        "role": "Développeur Backend bénévole",
+        "company": "Institut Supérieur Polytechnique de Madagascar",
+        "location": "Antananarivo",
+        "description": "Conception et développement d'un système temps réel : websockets pour les scores live, gestion des statistiques joueurs avec Redis, API de classement des meilleurs supporters.",
+        "tech": ["Socket.io", "Node.js", "MongoDB", "Redis", "React"]
+      },
+      {
+        "year": "2022",
+        "role": "Stagiaire Développeur Fullstack",
+        "company": "Le Petit Nid",
+        "location": "Antananarivo",
+        "description": "Stage de fin d'études pour l'obtention du diplôme de Licence en Informatique. Développement fullstack avec focus sur la conception de l'API et la modélisation des données.",
+        "tech": ["Node.js", "Vue.js", "MongoDB", "Three.js"]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Hevitro.mg",
+      "description": "Backend d'une plateforme citoyenne : API REST, système de vote, pipeline KYC, gestion des rôles et modération. Architecture modulaire pensée pour la montée en charge.",
+      "image": "/hevitro.png",
+      "tech": ["NestJS", "PostgreSQL", "TypeScript", "Docker"],
+      "link": "https://hevitro.mg"
+    },
+    {
+      "title": "Pandorra.ai",
+      "description": "Orchestration backend de services IA : files de traitement asynchrone, gestion des quotas, intégration multi-providers (OpenAI, RunwayML, ElevenLabs) et système de facturation.",
+      "image": "/pandorra.png",
+      "tech": ["NestJS", "TypeScript", "BullMQ", "OpenAI", "RunwayML"],
+      "link": "https://pandorra.ai"
+    },
+    {
+      "title": "Teratany",
+      "description": "Infrastructure backend d'un réseau social : API REST, gestion des relations, notifications, et déploiement Kubernetes multi-services.",
+      "image": "/teratany.png",
+      "tech": ["NestJS", "PostgreSQL", "Kubernetes", "Docker", "Redis"],
+      "link": "https://network.teratany.org"
+    },
+    {
+      "title": "Mibala — Temps Réel",
+      "description": "Système de scoring temps réel avec WebSockets : gestion des événements de jeu, statistiques joueurs, classement supporters via Redis pub/sub.",
+      "image": "/mibala.png",
+      "tech": ["Socket.io", "Node.js", "MongoDB", "Redis"],
+      "link": null
+    },
+    {
+      "title": "Tiakaly",
+      "description": "API de gestion de spots géolocalisés avec PostGIS pour les requêtes spatiales et endpoint de recherche par rayon géographique.",
+      "image": "/tiakaly.png",
+      "tech": ["NestJS", "PostgreSQL", "PostGIS"],
+      "link": "https://tiakaly.com"
+    },
+    {
+      "title": "Sowell",
+      "description": "Suite de tests automatisés E2E (Cypress, Playwright) garantissant la fiabilité des flux critiques d'une solution de gestion de patrimoine.",
+      "image": "/sowell.png",
+      "tech": ["Vue", "TypeScript", "Cypress", "Playwright"],
+      "link": "https://sowell.app"
+    }
+  ],
+  "gallery": [
+    { "src": "/galerie/3.jpg", "alt": "Sortie de promotion" },
+    {
+      "src": "/galerie/2.jpg",
+      "alt": "Prise de parole lors de l'info session GDSC ISPM"
+    },
+    { "src": "/galerie/4.jpg", "alt": "Mon Setup" },
+    { "src": "/galerie/5.jpg", "alt": "Workshop sur le thème du DevOps" }
+  ],
+  "community": [
+    {
+      "year": "2023 — Présent",
+      "role": "Membre",
+      "organization": "Google Developer Group Antananarivo",
+      "description": "Engagé au sein du GDG Antananarivo, contribution aux activités de la communauté et veille technologique."
+    },
+    {
+      "year": "2023 — 2024",
+      "role": "Leader",
+      "organization": "Google Developer Students Club ISPM",
+      "description": "Leader du GDSC à l'ISPM. Organisation de plusieurs ateliers et compétitions (Weekly December, Hackathon, Robots Battle, tournoi HackerRank)."
+    },
+    {
+      "year": "2023",
+      "role": "Organisateur",
+      "organization": "DevFest 2023 - Coding The Future",
+      "description": "Organisation du DevFest 2023 à Axian University avec coordination de la couverture photographique."
+    },
+    {
+      "year": "2023",
+      "role": "Responsable Communication",
+      "organization": "ITEAM ISPM",
+      "description": "Responsable de la communication de l'association des étudiants en Informatique de l'ISPM."
+    },
+    {
+      "year": "2019 — 2021",
+      "role": "Vice-président",
+      "organization": "All For Christ ISPM",
+      "description": "Vice-président de l'Association Chrétienne de l'ISPM. Organisation des événements et activités de la chorale."
+    }
+  ],
+  "skills": [
+    {
+      "title": "BACKEND & LANGAGES",
+      "skills": [
+        {
+          "name": "TypeScript",
+          "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
+        },
+        { "name": "Golang", "iconUrl": "https://cdn.simpleicons.org/go" },
+        {
+          "name": "JavaScript",
+          "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+        },
+        {
+          "name": "Python",
+          "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png"
+        },
+        { "name": "NestJS", "iconUrl": "https://cdn.simpleicons.org/nestjs" },
+        {
+          "name": "Express",
+          "iconUrl": "https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png"
+        },
+        {
+          "name": "Node.js",
+          "iconUrl": "https://cdn.simpleicons.org/nodedotjs"
+        },
+        {
+          "name": "Bun",
+          "iconUrl": "https://cdn.worldvectorlogo.com/logos/bun-1.svg"
+        }
+      ]
+    },
+    {
+      "title": "BASES DE DONNÉES & CACHE",
+      "skills": [
+        {
+          "name": "PostgreSQL",
+          "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1985px-Postgresql_elephant.svg.png"
+        },
+        { "name": "MongoDB", "iconUrl": "https://cdn.simpleicons.org/mongodb" },
+        { "name": "Redis", "iconUrl": "https://cdn.simpleicons.org/redis" },
+        {
+          "name": "Firebase",
+          "iconUrl": "https://cdn.simpleicons.org/firebase"
+        },
+        {
+          "name": "Supabase",
+          "iconUrl": "https://cdn.simpleicons.org/supabase"
+        }
+      ]
+    },
+    {
+      "title": "DEVOPS & INFRASTRUCTURE",
+      "skills": [
+        { "name": "Docker", "iconUrl": "https://cdn.simpleicons.org/docker" },
+        {
+          "name": "Kubernetes",
+          "iconUrl": "https://cdn.simpleicons.org/kubernetes"
+        },
+        { "name": "Jenkins", "iconUrl": "https://cdn.simpleicons.org/jenkins" },
+        {
+          "name": "Linux",
+          "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1012px-Tux.svg.png"
+        },
+        { "name": "Git", "iconUrl": "https://cdn.simpleicons.org/git" },
+        {
+          "name": "GitHub",
+          "iconUrl": "https://cdn.worldvectorlogo.com/logos/github-icon-2.svg"
+        }
+      ]
+    },
+    {
+      "title": "ARCHITECTURE & PATTERNS",
+      "bgMuted": true,
+      "skills": [
+        { "name": "Clean Architecture", "iconUrl": "" },
+        { "name": "Domain-Driven Design", "iconUrl": "" },
+        { "name": "API REST", "iconUrl": "" },
+        { "name": "GraphQL", "iconUrl": "" },
+        { "name": "WebSockets", "iconUrl": "" },
+        { "name": "Microservices", "iconUrl": "" },
+        { "name": "Queue / BullMQ", "iconUrl": "" }
+      ]
+    },
+    {
+      "title": "FRONTEND (ATOUT STRATÉGIQUE)",
+      "skills": [
+        {
+          "name": "Next.js",
+          "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV9uzErWz9EXqZDxZ5lP9aYpMz8eK6rr5X3w&s"
+        },
+        { "name": "React.js", "iconUrl": "https://cdn.simpleicons.org/react" },
+        {
+          "name": "Vue.js",
+          "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/330px-Vue.js_Logo_2.svg.png"
+        },
+        {
+          "name": "TailwindCSS",
+          "iconUrl": "https://cdn.simpleicons.org/tailwindcss"
+        },
+        {
+          "name": "Shadcn",
+          "iconUrl": "https://avatars.githubusercontent.com/u/139895814?v=4"
+        }
+      ]
+    },
+    {
+      "title": "INTELLIGENCE ARTIFICIELLE",
+      "skills": [
+        {
+          "name": "OpenAI API",
+          "iconUrl": "https://cdn.simpleicons.org/openai"
+        },
+        {
+          "name": "Cursor",
+          "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrQ_CU3a6muH84mLfoP6xmM4ZJ9Z6RAXMmdA&s"
+        },
+        {
+          "name": "CodeRabbit",
+          "iconUrl": "https://cdn.simpleicons.org/coderabbit"
+        },
+        {
+          "name": "Trunk Code Quality",
+          "iconUrl": "https://trunk.gallerycdn.vsassets.io/extensions/trunk/io/3.21.1/1758614980446/Microsoft.VisualStudio.Services.Icons.Default"
+        }
+      ]
+    },
+    {
+      "title": "OUTILS DE PRODUCTIVITÉ",
+      "skills": [
+        { "name": "Notion", "iconUrl": "https://cdn.simpleicons.org/notion" },
+        { "name": "Linear", "iconUrl": "https://cdn.simpleicons.org/linear" },
+        {
+          "name": "Obsidian",
+          "iconUrl": "https://cdn.simpleicons.org/obsidian"
+        },
+        {
+          "name": "Figma",
+          "iconUrl": "https://brandlogos.net/wp-content/uploads/2022/05/figma-logo_brandlogos.net_6n1pb-512x512.png"
+        },
+        {
+          "name": "Slack",
+          "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/1200px-Slack_icon_2019.svg.png"
+        },
+        { "name": "Trello", "iconUrl": "https://cdn.simpleicons.org/trello" }
+      ]
+    },
+    {
+      "title": "QUALITÉS",
+      "bgMuted": true,
+      "skills": [
+        { "name": "Compréhensif", "iconUrl": "" },
+        { "name": "Responsable", "iconUrl": "" },
+        { "name": "Adaptatif", "iconUrl": "" },
+        { "name": "Autonome", "iconUrl": "" },
+        { "name": "Sociable", "iconUrl": "" },
+        { "name": "Esprit collectif", "iconUrl": "" },
+        { "name": "Organisé", "iconUrl": "" },
+        { "name": "Aisance relationnelle", "iconUrl": "" }
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "title": "Et si la voix du peuple trouvait enfin un écho ?",
+      "excerpt": "Ces dernières semaines, en suivant l'actualité à Madagascar, j'ai vu défiler des centaines de publications sur Facebook.",
+      "date": "Nov 2025",
+      "readTime": "6 min",
+      "link": "https://www.linkedin.com/posts/andritianaa_et-si-la-voix-du-peuple-trouvait-enfin-un-activity-7386314531519635457-luf-?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+    },
+    {
+      "title": "4 règles pour retrouver la vraie concentration",
+      "excerpt": "En septembre, je partageais mon envie de reprendre le contrôle sur mon attention, j'ai donc commencé Deep Work de Cal Newport.",
+      "date": "Nov 2025",
+      "readTime": "2 min",
+      "link": "https://www.linkedin.com/posts/andritianaa_il-y-a-2-mois-je-partageais-mon-envie-de-activity-7379602328456437760-rdwk?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+    },
+    {
+      "title": "Je construis ma propre boilerplate fullstack.",
+      "excerpt": "Depuis quelque temps, je travaille sur un projet que j'aurais voulu avoir depuis longtemps...",
+      "date": "Oct 2025",
+      "readTime": "5 min",
+      "link": "https://www.linkedin.com/posts/andritianaa_je-construis-ma-propre-boilerplate-fullstack-activity-7382364377145909248-con4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+    },
+    {
+      "title": "Comment je reprends le contrôle",
+      "excerpt": "4 à 5 heures par jour. C'est le temps que je passe, parfois sans m'en rendre compte, sur mon téléphone.",
+      "date": "Sept 2025",
+      "readTime": "3 min",
+      "link": "https://www.linkedin.com/posts/andritianaa_4-%C3%A0-5-heures-par-jour-cest-le-temps-que-activity-7354050343325835264-Ki7G?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+    }
+  ],
+  "socials": [
+    {
+      "name": "GitHub",
+      "handle": "@andritianaa",
+      "url": "https://github.com/andritianaa"
+    },
+    {
+      "name": "LinkedIn",
+      "handle": "andritiana",
+      "url": "https://www.linkedin.com/in/andritianaa/"
+    },
+    {
+      "name": "ComeUp",
+      "handle": "@andritiana-steve",
+      "url": "https://comeup.com/fr/@andritiana-steve"
+    },
+    {
+      "name": "Whatsapp",
+      "handle": "+261 38 62 319 63",
+      "url": "https://wa.me/261386231963"
+    }
+  ]
+}
