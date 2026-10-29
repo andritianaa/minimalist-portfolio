@@ -64,7 +64,7 @@
         "role": "Lead Développeur Fullstack · Pilier Backend",
         "company": "Teratany",
         "location": "Antananarivo",
-        "description": "Ownership technique complet sur le réseau social Teratany (ODD) et Hevitro.mg (plateforme citoyenne KYC). Responsabilité principale sur l'architecture backend, les APIs REST, la gestion des bases de données et l'optimisation des performances. Mise en place de l'infrastructure DevOps : pipelines CI/CD, orchestration Kubernetes, containerisation Docker.",
+        "description": "Ownership technique complet sur le réseau social Teratany (ODD) et Hevitro (plateforme citoyenne KYC). Responsabilité principale sur l'architecture backend, les APIs REST, la gestion des bases de données et l'optimisation des performances. Mise en place de l'infrastructure DevOps : pipelines CI/CD, orchestration Kubernetes, containerisation Docker.",
         "tech": [
           "Node.js",
           "TypeScript",
@@ -146,25 +146,66 @@
   },
   "projects": [
     {
-      "title": "Hevitro.mg",
-      "description": "Backend d'une plateforme citoyenne : API REST, système de vote, pipeline KYC, gestion des rôles et modération. Architecture modulaire pensée pour la montée en charge.",
-      "image": "/hevitro.png",
-      "tech": ["NestJS", "PostgreSQL", "TypeScript", "Docker"],
-      "link": "https://hevitro.mg"
+      "title": "Selfhostsms",
+      "description": "Passerelle SMS auto-hébergée : envoi, réception, campagnes et automatisations depuis ses propres téléphones Android, sur son propre serveur. Licence à vie, sans coût par message — un lycée y a envoyé plus de 16 000 SMS en un mois.",
+      "image": "/selfhostsms.jpg",
+      "tech": ["SaaS", "API", "Android", "Paiement en ligne"],
+      "link": "https://sms.araylab.com"
+    },
+    {
+      "title": "Maka",
+      "description": "Gestionnaire de téléchargements gratuit pour Windows et Linux : connexions multiples, reprise après coupure, vidéos YouTube/TikTok/Instagram, torrents, planificateur et extension navigateur. Sans compte ni tracking, 7 langues.",
+      "image": "/maka.webp",
+      "tech": [
+        "Desktop",
+        "Windows",
+        "Linux",
+        "Extension navigateur",
+        "BitTorrent"
+      ],
+      "link": "https://maka.araylab.com"
+    },
+    {
+      "title": "Apply Now",
+      "description": "Génère un CV et une lettre de motivation adaptés à chaque offre à partir d'un profil de carrière unique. Clé API personnelle chiffrée, 10 fournisseurs d'IA + Ollama en local, export PDF, interface FR/EN.",
+      "image": "/applynow.jpg",
+      "tech": ["IA", "LLM", "Export PDF", "Chiffrement", "Bilingue"],
+      "link": "https://cv.araylab.com"
     },
     {
       "title": "Pandorra.ai",
-      "description": "Orchestration backend de services IA : files de traitement asynchrone, gestion des quotas, intégration multi-providers (OpenAI, RunwayML, ElevenLabs) et système de facturation.",
+      "description": "Plateforme de création d'influenceurs IA (visage, voix, vidéo et lip-sync cohérents). Orchestration backend multi-providers, files de traitement asynchrone, abonnements et facturation par crédits.",
       "image": "/pandorra.png",
       "tech": ["NestJS", "TypeScript", "BullMQ", "OpenAI", "RunwayML"],
       "link": "https://pandorra.ai"
     },
     {
+      "title": "Hevitro",
+      "description": "Plateforme citoyenne en production : idées, signalements, carte interactive, fil d'actualité, vote, modération et messagerie. Backend modulaire avec pipeline KYC et gestion des rôles, pensé pour la montée en charge.",
+      "image": "/hevitro.png",
+      "tech": ["NestJS", "PostgreSQL", "TypeScript", "Docker"],
+      "link": "https://hevitro.com"
+    },
+    {
+      "title": "Tiakaly",
+      "description": "Guide des meilleures adresses de Madagascar (300+ lieux testés, 210k+ abonnés) : recherche par plat, lieu ou ambiance, carte interactive et favoris. API de spots géolocalisés avec PostGIS et recherche par rayon.",
+      "image": "/tiakaly.png",
+      "tech": ["NestJS", "PostgreSQL", "PostGIS"],
+      "link": "https://tiakaly.com"
+    },
+    {
+      "title": "École Le Petit Nid",
+      "description": "Portail de gestion scolaire avec des espaces dédiés à l'administration, aux enseignants, aux parents et aux élèves. Remplace tableurs et cahiers ; en production à l'école Le Petit Nid (Soavimbahoaka).",
+      "image": "/lpn.jpg",
+      "tech": ["Outil métier", "Multi-profils", "Web"],
+      "link": "https://c.lpn.mg"
+    },
+    {
       "title": "Teratany",
-      "description": "Infrastructure backend d'un réseau social : API REST, gestion des relations, notifications, et déploiement Kubernetes multi-services.",
+      "description": "Réseau social mobile et web : fil de publications, profils, relations, messagerie, traduction intégrée et heatmap des contenus. Backend REST et déploiement Kubernetes multi-services. Actuellement hors ligne, refonte en cours.",
       "image": "/teratany.png",
       "tech": ["NestJS", "PostgreSQL", "Kubernetes", "Docker", "Redis"],
-      "link": "https://network.teratany.org"
+      "link": null
     },
     {
       "title": "Mibala — Temps Réel",
@@ -172,13 +213,6 @@
       "image": "/mibala.png",
       "tech": ["Socket.io", "Node.js", "MongoDB", "Redis"],
       "link": null
-    },
-    {
-      "title": "Tiakaly",
-      "description": "API de gestion de spots géolocalisés avec PostGIS pour les requêtes spatiales et endpoint de recherche par rayon géographique.",
-      "image": "/tiakaly.png",
-      "tech": ["NestJS", "PostgreSQL", "PostGIS"],
-      "link": "https://tiakaly.com"
     },
     {
       "title": "Sowell",
