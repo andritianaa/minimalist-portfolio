@@ -173,6 +173,13 @@
       "link": "https://cv.araylab.com"
     },
     {
+      "title": "Adnalyze",
+      "description": "SaaS d'analyse des campagnes Meta Ads : compte publicitaire relié en un clic, objectif principal défini à l'inscription pour adapter l'analyse à l'intention publicitaire. Détection automatique (leadgen, retargeting, e-commerce), score de lisibilité du compte, signaux et recommandations personnalisées, comparaison sectorielle des KPI (CPC, CTR, ROAS, CPA).",
+      "image": "/adnalyze.jpg",
+      "tech": ["SaaS", "Meta Ads", "Analytics", "Dashboard", "Recommandations"],
+      "link": "#"
+    },
+    {
       "title": "Pandorra.ai",
       "description": "Plateforme de création d'influenceurs IA (visage, voix, vidéo et lip-sync cohérents). Orchestration backend multi-providers, files de traitement asynchrone, abonnements et facturation par crédits.",
       "image": "/pandorra.png",
