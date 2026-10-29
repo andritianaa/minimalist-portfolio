@@ -57,90 +57,63 @@
     }
   },
   "experience": {
-    "period": "2022 — Maintenant (4 ans)",
+    "period": "2022 - Maintenant (4 ans)",
     "jobs": [
       {
-        "year": "2022 — 2026",
-        "role": "Lead Développeur Fullstack · Pilier Backend",
-        "company": "Teratany",
-        "location": "Antananarivo",
-        "description": "Ownership technique complet sur le réseau social Teratany (ODD) et Hevitro (plateforme citoyenne KYC). Responsabilité principale sur l'architecture backend, les APIs REST, la gestion des bases de données et l'optimisation des performances. Mise en place de l'infrastructure DevOps : pipelines CI/CD, orchestration Kubernetes, containerisation Docker.",
-        "tech": [
-          "Node.js",
-          "TypeScript",
-          "PostgreSQL",
-          "Kubernetes",
-          "Docker",
-          "Redis",
-          "Next.js"
-        ]
-      },
-      {
-        "year": "2022 — Maintenant",
+        "year": "2022 - Maintenant",
         "role": "Développeur Fullstack Freelance",
         "company": "ComeUp - Malt",
         "location": "Distantiel",
-        "description": "Développement de solutions pour une trentaine de clients sur des projets variés — avec un focus naturel sur la conception d'APIs robustes, la modélisation de bases de données et les intégrations backend. Livraison de produits maintenables de bout en bout.",
-        "tech": [
-          "Node.js",
-          "Bun",
-          "Golang",
-          "NestJS",
-          "MongoDB",
-          "PostgreSQL",
-          "Express",
-          "Docker",
-          "Redis",
-          "Next.js"
-        ]
+        "description": "Conception, développement et déploiement de plus de 30 applications web et plateformes SaaS sur mesure pour des clients locaux et internationaux : frontend et backend modernes, bases de données, workflows automatisés, paiements Stripe, services IA et maquettes Figma. Prise en charge de tout le cycle de vie, du cadrage du besoin au déploiement sur Linux.",
+        "tech": ["JavaScript", "TypeScript", "Next.js", "Node.js", "Go", "PostgreSQL", "MongoDB", "Stripe", "API IA", "Linux"]
       },
       {
-        "year": "2024 — 2025",
-        "role": "Lead Développeur · Backend & Intégrations IA",
-        "company": "Pandorra.ai",
-        "location": "Distantiel (Canada)",
-        "description": "Développement d'une plateforme créative IA : orchestration des appels vers les APIs d'IA (OpenAI, Runway ML, ElevenLabs), gestion des files de traitement asynchrone, conception du système de facturation et des quotas utilisateurs.",
-        "tech": [
-          "NestJS",
-          "TypeScript",
-          "PostgreSQL",
-          "OpenAI",
-          "Runway ML",
-          "ElevenLabs",
-          "BullMQ"
-        ]
+        "year": "2022 - 2026",
+        "role": "Lead Développeur Fullstack & DevOps",
+        "company": "Teratany",
+        "location": "Antananarivo",
+        "description": "Leadership technique sur la conception et le déploiement du réseau social engagé Teratany (axé sur les 17 ODD) et de la plateforme citoyenne Hevitro.mg. Conception d'architectures applicatives, d'outils internes et d'une application de gestion scolaire ; infrastructures conteneurisées, fonctionnalités temps réel et géospatiales ; encadrement de l'équipe, choix des stacks et CI/CD.",
+        "tech": ["Next.js", "Node.js", "TypeScript", "Express", "PostgreSQL", "MongoDB", "Docker", "Kubernetes", "Socket.io", "Leaflet"]
       },
       {
-        "year": "2025",
-        "role": "Développeur Backend",
+        "year": "2025 - 2026",
+        "role": "Développeur Fullstack Freelance",
         "company": "Tiakaly",
         "location": "Antananarivo",
-        "description": "Conception du backend et de la base de données pour une plateforme de spots géolocalisés. API de gestion des points d'intérêt avec intégration cartographique.",
-        "tech": ["NestJS", "PostgreSQL", "PostGIS", "Next.js", "Leaflet"]
+        "description": "Conception, développement et mise en production de A à Z de la plateforme web Tiakaly : carte interactive synchronisée avec le profil Instagram pour géolocaliser les adresses recommandées, et module d'abonnement payant offrant des avantages exclusifs dans des restaurants partenaires.",
+        "tech": ["Next.js", "TypeScript", "Shadcn UI", "PostgreSQL", "Leaflet"]
       },
       {
-        "year": "2023 — 2024",
-        "role": "Développeur Frontend / QA",
+        "year": "2024 - 2025",
+        "role": "Lead Développeur Fullstack Freelance",
+        "company": "Pandorra.ai",
+        "location": "Distantiel (Canada)",
+        "description": "Conception et développement de l'architecture SaaS d'une plateforme créative basée sur l'IA : intégration et orchestration d'API génératives (vidéos, images, voix et textes), et interface réactive pour créer du contenu multimédia sans compétences techniques.",
+        "tech": ["Next.js", "TypeScript", "TailwindCSS", "Shadcn UI", "OpenAI", "Fal.ai", "ElevenLabs", "RunwayML", "Kling AI"]
+      },
+      {
+        "year": "2023 - 2024",
+        "role": "Consultant Développeur Frontend",
         "company": "Sowell",
         "location": "Antananarivo",
-        "description": "Développement frontend et mise en place de la stratégie de tests automatisés (E2E et intégration) sur une solution de gestion de patrimoine. Collaboration étroite avec les équipes backend pour garantir la cohérence des contrats d'API.",
-        "tech": ["Vue", "TypeScript", "Cypress", "Playwright", "Linear"]
+        "description": "Développement d'interfaces performantes pour une solution d'optimisation de la gestion de patrimoine immobilier, écriture et automatisation de tests End-to-End sur les fonctionnalités clés, travail en équipe agile avec suivi des tickets sur Linear.",
+        "tech": ["Vue.js", "TypeScript", "Cypress", "Linear"]
       },
       {
         "year": "2023",
-        "role": "Développeur Backend bénévole",
+        "role": "Développeur Fullstack (bénévole)",
         "company": "Institut Supérieur Polytechnique de Madagascar",
         "location": "Antananarivo",
-        "description": "Conception et développement d'un système temps réel : websockets pour les scores live, gestion des statistiques joueurs avec Redis, API de classement des meilleurs supporters.",
-        "tech": ["Socket.io", "Node.js", "MongoDB", "Redis", "React"]
+        "description": "Conception et déploiement d'une plateforme de live-scoring et de statistiques pour le Mibala Tournament, tournoi de basket inter-universitaire au Palais des Sports de Mahamasina : tableau de score en temps réel et suivi de l'engagement des spectateurs.",
+        "tech": ["Node.js", "React", "MongoDB", "Redis", "Socket.io"]
       },
       {
         "year": "2022",
         "role": "Stagiaire Développeur Fullstack",
         "company": "Le Petit Nid",
         "location": "Antananarivo",
-        "description": "Stage de fin d'études pour l'obtention du diplôme de Licence en Informatique. Développement fullstack avec focus sur la conception de l'API et la modélisation des données.",
-        "tech": ["Node.js", "Vue.js", "MongoDB", "Three.js"]
+        "description": "Stage de fin d'études en développement fullstack pour l'obtention de la Licence en Informatique, Multimédia, Technologies de l'Information, de la Communication et Intelligence Artificielle.",
+        "tech": ["Node.js", "Express", "Vue.js", "Three.js", "MongoDB"]
       }
     ]
   },
