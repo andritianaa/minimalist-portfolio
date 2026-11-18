@@ -119,6 +119,13 @@
   },
   "projects": [
     {
+      "title": "Mailaka",
+      "description": "Plateforme e-mail auto-hébergée : boîtes professionnelles sur son propre domaine (comme Gmail), API d'envoi transactionnel (comme Resend) et console d'administration, installées en une commande sur son serveur. Connexion par clé d'accès, chiffrement en transit, supervision intégrée et mises à jour signées avec retour arrière automatique.",
+      "image": "/mailaka.jpg",
+      "tech": ["Rust", "React", "Stalwart", "Auto-hébergé", "API d'envoi"],
+      "link": "https://mailaka.araylab.com"
+    },
+    {
       "title": "Selfhostsms",
       "description": "Passerelle SMS auto-hébergée : envoi, réception, campagnes et automatisations depuis ses propres téléphones Android, sur son propre serveur. Licence à vie, sans coût par message — un lycée y a envoyé plus de 16 000 SMS en un mois.",
       "image": "/selfhostsms.jpg",
@@ -144,6 +151,13 @@
       "image": "/applynow.jpg",
       "tech": ["IA", "LLM", "Export PDF", "Chiffrement", "Bilingue"],
       "link": "https://cv.araylab.com"
+    },
+    {
+      "title": "FlowSimplicity GMAO",
+      "description": "Application mobile de GMAO pour les interventions terrain : planification et suivi des missions, carnet d'entretien des équipements, gestion des stocks, suivi GPS, rapports PDF signés et mode hors-ligne. Publiée sur le Google Play Store.",
+      "image": "/flowsimplicity.jpg",
+      "tech": ["Mobile", "Android", "Mode hors-ligne", "GPS", "Export PDF"],
+      "link": "https://play.google.com/store/apps/details?id=com.flowsimplicity.app"
     },
     {
       "title": "Adnalyze",
@@ -249,29 +263,30 @@
       "skills": [
         {
           "name": "TypeScript",
-          "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
+          "iconUrl": "/icons/typescript.svg"
         },
-        { "name": "Golang", "iconUrl": "https://cdn.simpleicons.org/go" },
+        { "name": "Golang", "iconUrl": "/icons/go.svg" },
         {
           "name": "JavaScript",
-          "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+          "iconUrl": "/icons/javascript.svg"
         },
         {
           "name": "Python",
-          "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png"
+          "iconUrl": "/icons/python.svg"
         },
-        { "name": "NestJS", "iconUrl": "https://cdn.simpleicons.org/nestjs" },
+        { "name": "NestJS", "iconUrl": "/icons/nestjs.svg" },
         {
           "name": "Express",
-          "iconUrl": "https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png"
+          "iconUrl": "/icons/express.svg",
+          "mono": true
         },
         {
           "name": "Node.js",
-          "iconUrl": "https://cdn.simpleicons.org/nodedotjs"
+          "iconUrl": "/icons/nodejs.svg"
         },
         {
           "name": "Bun",
-          "iconUrl": "https://cdn.worldvectorlogo.com/logos/bun-1.svg"
+          "iconUrl": "/icons/bun.svg"
         }
       ]
     },
@@ -280,37 +295,38 @@
       "skills": [
         {
           "name": "PostgreSQL",
-          "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1985px-Postgresql_elephant.svg.png"
+          "iconUrl": "/icons/postgresql.svg"
         },
-        { "name": "MongoDB", "iconUrl": "https://cdn.simpleicons.org/mongodb" },
-        { "name": "Redis", "iconUrl": "https://cdn.simpleicons.org/redis" },
+        { "name": "MongoDB", "iconUrl": "/icons/mongodb.svg" },
+        { "name": "Redis", "iconUrl": "/icons/redis.svg" },
         {
           "name": "Firebase",
-          "iconUrl": "https://cdn.simpleicons.org/firebase"
+          "iconUrl": "/icons/firebase.svg"
         },
         {
           "name": "Supabase",
-          "iconUrl": "https://cdn.simpleicons.org/supabase"
+          "iconUrl": "/icons/supabase.svg"
         }
       ]
     },
     {
       "title": "DEVOPS & INFRASTRUCTURE",
       "skills": [
-        { "name": "Docker", "iconUrl": "https://cdn.simpleicons.org/docker" },
+        { "name": "Docker", "iconUrl": "/icons/docker.svg" },
         {
           "name": "Kubernetes",
-          "iconUrl": "https://cdn.simpleicons.org/kubernetes"
+          "iconUrl": "/icons/kubernetes.svg"
         },
-        { "name": "Jenkins", "iconUrl": "https://cdn.simpleicons.org/jenkins" },
+        { "name": "Jenkins", "iconUrl": "/icons/jenkins.svg" },
         {
           "name": "Linux",
-          "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1012px-Tux.svg.png"
+          "iconUrl": "/icons/linux.svg"
         },
-        { "name": "Git", "iconUrl": "https://cdn.simpleicons.org/git" },
+        { "name": "Git", "iconUrl": "/icons/git.svg" },
         {
           "name": "GitHub",
-          "iconUrl": "https://cdn.worldvectorlogo.com/logos/github-icon-2.svg"
+          "iconUrl": "/icons/github.svg",
+          "mono": true
         }
       ]
     },
@@ -332,20 +348,22 @@
       "skills": [
         {
           "name": "Next.js",
-          "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV9uzErWz9EXqZDxZ5lP9aYpMz8eK6rr5X3w&s"
+          "iconUrl": "/icons/nextjs.svg",
+          "mono": true
         },
-        { "name": "React.js", "iconUrl": "https://cdn.simpleicons.org/react" },
+        { "name": "React.js", "iconUrl": "/icons/react.svg" },
         {
           "name": "Vue.js",
-          "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/330px-Vue.js_Logo_2.svg.png"
+          "iconUrl": "/icons/vuejs.svg"
         },
         {
           "name": "TailwindCSS",
-          "iconUrl": "https://cdn.simpleicons.org/tailwindcss"
+          "iconUrl": "/icons/tailwindcss.svg"
         },
         {
           "name": "Shadcn",
-          "iconUrl": "https://avatars.githubusercontent.com/u/139895814?v=4"
+          "iconUrl": "/icons/shadcn.svg",
+          "mono": true
         }
       ]
     },
@@ -354,40 +372,42 @@
       "skills": [
         {
           "name": "OpenAI API",
-          "iconUrl": "https://cdn.simpleicons.org/openai"
+          "iconUrl": "/icons/openai.svg",
+          "mono": true
         },
         {
           "name": "Cursor",
-          "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrQ_CU3a6muH84mLfoP6xmM4ZJ9Z6RAXMmdA&s"
+          "iconUrl": "/icons/cursor.svg",
+          "mono": true
         },
         {
           "name": "CodeRabbit",
-          "iconUrl": "https://cdn.simpleicons.org/coderabbit"
+          "iconUrl": "/icons/coderabbit.svg"
         },
         {
           "name": "Trunk Code Quality",
-          "iconUrl": "https://trunk.gallerycdn.vsassets.io/extensions/trunk/io/3.21.1/1758614980446/Microsoft.VisualStudio.Services.Icons.Default"
+          "iconUrl": "/icons/trunk.png"
         }
       ]
     },
     {
       "title": "OUTILS DE PRODUCTIVITÉ",
       "skills": [
-        { "name": "Notion", "iconUrl": "https://cdn.simpleicons.org/notion" },
-        { "name": "Linear", "iconUrl": "https://cdn.simpleicons.org/linear" },
+        { "name": "Notion", "iconUrl": "/icons/notion.svg" },
+        { "name": "Linear", "iconUrl": "/icons/linear.svg", "mono": true },
         {
           "name": "Obsidian",
-          "iconUrl": "https://cdn.simpleicons.org/obsidian"
+          "iconUrl": "/icons/obsidian.svg"
         },
         {
           "name": "Figma",
-          "iconUrl": "https://brandlogos.net/wp-content/uploads/2022/05/figma-logo_brandlogos.net_6n1pb-512x512.png"
+          "iconUrl": "/icons/figma.svg"
         },
         {
           "name": "Slack",
-          "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/1200px-Slack_icon_2019.svg.png"
+          "iconUrl": "/icons/slack.svg"
         },
-        { "name": "Trello", "iconUrl": "https://cdn.simpleicons.org/trello" }
+        { "name": "Trello", "iconUrl": "/icons/trello.svg" }
       ]
     },
     {

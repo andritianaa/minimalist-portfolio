@@ -2,29 +2,39 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 
 import { Button } from "@/components/ui/button";
 import content from "./content.json";
 
+// Attributs d'un élément qui apparaît au défilement, décalé de son rang pour
+// que les éléments d'une même liste montent l'un après l'autre.
+const reveal = (index = 0, step = 80) => ({
+  "data-reveal": "",
+  style: { "--reveal-delay": `${Math.min(index, 6) * step}ms` } as CSSProperties,
+});
+
+type ViewTransitionDocument = Document & {
+  startViewTransition?: (update: () => void) => { ready: Promise<void> };
+};
+
 export default function Home() {
-  const [isDark, setIsDark] = useState(true);
   const [activeSection, setActiveSection] = useState("");
   const [hoveredSection, setHoveredSection] = useState<string | null>(null);
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
+  const themeButtonRef = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDark);
-  }, [isDark]);
-
+  // Entrée de chaque section et de ses éléments, une seule fois.
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fade-in-up");
-            setActiveSection(entry.target.id);
-          }
+          if (!entry.isIntersecting) return;
+          const el = entry.target as HTMLElement;
+          el.classList.add(
+            el.hasAttribute("data-reveal") ? "is-revealed" : "animate-fade-in-up",
+          );
+          observer.unobserve(el);
         });
       },
       {
@@ -36,12 +46,130 @@ export default function Home() {
     sectionsRef.current.forEach((section) => {
       if (section) observer.observe(section);
     });
+    document
+      .querySelectorAll("[data-reveal]")
+      .forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, []);
 
+  // La section active est celle qui passe la ligne des 40 % de l'écran : un
+  // seul résultat à chaque instant, ce qui fait glisser le marqueur proprement.
+  useEffect(() => {
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const sections = sectionsRef.current.filter(
+        (s): s is HTMLElement => s !== null,
+      );
+      if (sections.length === 0) return;
+      const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2;
+      const line = window.innerHeight * 0.4;
+      let current = sections[0];
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= line) current = section;
+      }
+      setActiveSection(atBottom ? sections[sections.length - 1].id : current.id);
+    };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
+
+  // Fin de section : quand on s'arrête de descendre et que la section suivante
+  // occupe déjà le bas de l'écran, la page glisse jusqu'à son début. Au milieu
+  // d'une longue section (projets, galerie), rien ne bouge. Le scroll-snap CSS
+  // a été écarté : en mode « proximity », plusieurs petits crans de molette
+  // ramenaient la page au début de la section.
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let settledY = window.scrollY;
+    let timer = 0;
+    let gliding = false;
+
+    const onScrollEnd = () => {
+      const y = window.scrollY;
+      const goingDown = y > settledY + 4;
+      settledY = y;
+      if (gliding) {
+        gliding = false;
+        return;
+      }
+      if (!goingDown) return;
+
+      const next = sectionsRef.current.find((section) => {
+        if (!section) return false;
+        const top = section.getBoundingClientRect().top;
+        return top > 4 && top < window.innerHeight * 0.55;
+      });
+      if (!next) return;
+
+      gliding = true;
+      next.scrollIntoView({ behavior: "smooth" });
+    };
+
+    const onScroll = () => {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(onScrollEnd, 140);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  // Même geste que maka.araylab.com : le nouveau thème s'ouvre en cercle
+  // depuis le bouton, là où le navigateur connaît les View Transitions.
   const toggleTheme = () => {
-    setIsDark(!isDark);
+    const root = document.documentElement;
+    const apply = () => {
+      const dark = root.classList.toggle("dark");
+      try {
+        localStorage.setItem("theme", dark ? "dark" : "light");
+      } catch {}
+    };
+    const doc = document as ViewTransitionDocument;
+    const reduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    const button = themeButtonRef.current;
+    if (!doc.startViewTransition || reduced || !button) return apply();
+
+    const b = button.getBoundingClientRect();
+    const x = b.left + b.width / 2;
+    const y = b.top + b.height / 2;
+    const r = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y),
+    );
+    doc.startViewTransition(apply).ready.then(() => {
+      root.animate(
+        {
+          clipPath: [
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${r}px at ${x}px ${y}px)`,
+          ],
+        },
+        {
+          duration: 650,
+          easing: "cubic-bezier(0.2, 0.7, 0.2, 1)",
+          pseudoElement: "::view-transition-new(root)",
+        },
+      );
+    });
   };
 
   const sections = [
@@ -60,35 +188,37 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground relative">
       {/* Theme Toggle Button */}
       <button
+        ref={themeButtonRef}
         onClick={toggleTheme}
-        className="fixed top-8 right-8 z-20 group p-3 rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-300"
+        className="theme-toggle fixed top-8 right-8 z-20"
         aria-label="Changer le thème"
       >
-        {isDark ? (
-          <svg
-            className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              fillRule="evenodd"
-              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-              clipRule="evenodd"
-            />
-          </svg>
-        ) : (
-          <svg
-            className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-          </svg>
-        )}
+        <svg
+          className="sun"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+        >
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+        </svg>
+        <svg
+          className="moon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a6.6 6.6 0 0 0 10.7 10.7z" />
+        </svg>
       </button>
 
       <nav className="fixed left-8 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
-        <div className="flex flex-col gap-4">
+        <div className="relative flex flex-col gap-4">
           {sections.map((section) => (
             <div key={section.id} className="relative group">
               <button
@@ -99,21 +229,39 @@ export default function Home() {
                 }
                 onMouseEnter={() => setHoveredSection(section.id)}
                 onMouseLeave={() => setHoveredSection(null)}
-                className={`w-2 h-8 rounded-full transition-all duration-500 ${
-                  activeSection === section.id
-                    ? "bg-foreground"
-                    : "bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                }`}
+                className="block w-2 h-8 rounded-full bg-muted-foreground/30 hover:bg-muted-foreground/60 transition-colors duration-500"
                 aria-label={`Naviguer vers ${section.label}`}
+                aria-current={activeSection === section.id ? "true" : undefined}
               />
-              {(hoveredSection === section.id ||
-                activeSection === section.id) && (
-                <div className="absolute left-6 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-foreground text-background text-sm rounded whitespace-nowrap shadow-lg animate-fade-in">
-                  {section.label}
-                </div>
-              )}
+              {hoveredSection === section.id &&
+                activeSection !== section.id && (
+                  <div className="nav-marker-label absolute left-6 top-1/2 px-3 py-1.5 bg-muted text-foreground text-sm rounded whitespace-nowrap shadow-lg pointer-events-none">
+                    {section.label}
+                  </div>
+                )}
             </div>
           ))}
+
+          {/* Le marqueur : une seule pastille qui glisse vers la section
+              active (pas de 3rem = hauteur d'un trait + écart). */}
+          {(() => {
+            const index = sections.findIndex((s) => s.id === activeSection);
+            if (index === -1) return null;
+            return (
+              <div
+                className="nav-marker absolute left-0 top-0 w-2 h-8 rounded-full bg-foreground pointer-events-none"
+                style={{ "--i": index } as CSSProperties}
+                aria-hidden="true"
+              >
+                <div
+                  key={activeSection}
+                  className="nav-marker-label absolute left-6 top-1/2 px-3 py-1.5 bg-foreground text-background text-sm rounded whitespace-nowrap shadow-lg"
+                >
+                  {sections[index].label}
+                </div>
+              </div>
+            );
+          })()}
         </div>
       </nav>
 
@@ -322,6 +470,7 @@ export default function Home() {
               {content.experience.jobs.map((job, index) => (
                 <div
                   key={index}
+                  {...reveal(index)}
                   className="group grid lg:grid-cols-12 gap-4 sm:gap-8 py-6 sm:py-8 border-b border-border/50 hover:border-border transition-colors duration-500"
                 >
                   <div className="lg:col-span-3">
@@ -377,6 +526,7 @@ export default function Home() {
               {content.projects.map((project, index) => (
                 <article
                   key={index}
+                  {...reveal(index % 2, 120)}
                   className="group border border-border rounded-lg overflow-hidden hover:border-muted-foreground/50 transition-all duration-500 hover:shadow-lg"
                 >
                   <div className="aspect-video bg-muted relative overflow-hidden">
@@ -464,6 +614,7 @@ export default function Home() {
                       {column1.map((photo, index) => (
                         <div
                           key={index}
+                          {...reveal(index * 2)}
                           className="group relative overflow-hidden rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-500"
                         >
                           <Image
@@ -488,6 +639,7 @@ export default function Home() {
                       {column2.map((photo, index) => (
                         <div
                           key={index}
+                          {...reveal(index * 2 + 1)}
                           className="group relative overflow-hidden rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-500"
                         >
                           <Image
@@ -531,6 +683,7 @@ export default function Home() {
               {content.community.map((activity, index) => (
                 <div
                   key={index}
+                  {...reveal(index)}
                   className="group grid lg:grid-cols-12 gap-4 sm:gap-8 py-6 border-b border-border/50 hover:border-border transition-colors duration-500"
                 >
                   <div className="lg:col-span-3">
@@ -568,42 +721,80 @@ export default function Home() {
               Compétences Techniques
             </h2>
 
-            <div className="grid gap-8 lg:grid-cols-2">
-              {content.skills.map((category, categoryIndex) => (
-                <div key={categoryIndex} className="space-y-6">
-                  <div>
-                    <h3 className="text-sm text-muted-foreground font-mono mb-4">
+            {/* Les outils, avec leur logo, en cartes ; les savoir-faire sans
+                logo (architecture, qualités) en étiquettes, à part. */}
+            <div className="grid gap-6 lg:grid-cols-2">
+              {content.skills
+                .filter((category) => category.skills.some((s) => s.iconUrl))
+                .map((category, categoryIndex) => (
+                  <div
+                    key={category.title}
+                    {...reveal(categoryIndex % 2, 120)}
+                    className="p-5 sm:p-6 border border-border rounded-lg hover:border-muted-foreground/50 transition-colors duration-500 space-y-5"
+                  >
+                    <div className="flex items-baseline justify-between gap-4">
+                      <h3 className="text-sm text-muted-foreground font-mono">
+                        {category.title}
+                      </h3>
+                      <span className="text-xs text-muted-foreground/60 font-mono">
+                        {String(category.skills.length).padStart(2, "0")}
+                      </span>
+                    </div>
+                    <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-1.5">
+                      {category.skills.map((skill) => (
+                        <li
+                          key={skill.name}
+                          className="group flex items-center gap-3 rounded-md px-2 py-2 hover:bg-muted/60 transition-colors duration-300"
+                        >
+                          <span className="grid place-items-center w-9 h-9 shrink-0 rounded-md bg-muted/50 group-hover:bg-background transition-colors duration-300">
+                            {skill.iconUrl && (
+                              <Image
+                                src={skill.iconUrl}
+                                alt=""
+                                className={`w-5 h-5 object-contain group-hover:scale-110 transition-transform duration-300 ${
+                                  "mono" in skill && skill.mono ? "icon-mono" : ""
+                                }`}
+                                loading="lazy"
+                                width={20}
+                                height={20}
+                                unoptimized
+                              />
+                            )}
+                          </span>
+                          <span className="min-w-0 text-sm leading-snug">
+                            {skill.name}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+            </div>
+
+            <div className="grid gap-10 lg:grid-cols-2">
+              {content.skills
+                .filter((category) => !category.skills.some((s) => s.iconUrl))
+                .map((category, categoryIndex) => (
+                  <div
+                    key={category.title}
+                    {...reveal(categoryIndex % 2, 120)}
+                    className="space-y-4"
+                  >
+                    <h3 className="text-sm text-muted-foreground font-mono">
                       {category.title}
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       {category.skills.map((skill) => (
                         <span
                           key={skill.name}
-                          className={`group px-3 py-1.5 text-sm border border-border rounded-full hover:border-muted-foreground/50 transition-all duration-300 flex items-center gap-2 ${
-                            category.title === "QUALITÉS" ||
-                            category.title === "ARCHITECTURE & PATTERNS"
-                              ? "bg-muted/50"
-                              : ""
-                          }`}
+                          className="px-3 py-1.5 text-sm border border-border rounded-full bg-muted/50 hover:border-muted-foreground/50 transition-colors duration-300"
                         >
-                          {skill.iconUrl && (
-                            <Image
-                              src={skill.iconUrl}
-                              alt={skill.name}
-                              className="w-4 h-4 group-hover:scale-110 transition-transform duration-300"
-                              loading="lazy"
-                              width={16}
-                              height={16}
-                              unoptimized
-                            />
-                          )}
-                          <span>{skill.name}</span>
+                          {skill.name}
                         </span>
                       ))}
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
         </section>
@@ -624,6 +815,7 @@ export default function Home() {
               {content.publications.map((post, index) => (
                 <Link
                   key={index}
+                  {...reveal(index % 2, 120)}
                   href={post.link}
                   target="_blank"
                   className="group p-6 sm:p-8 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-500 hover:shadow-lg cursor-pointer block"
@@ -716,9 +908,10 @@ export default function Home() {
                 RÉSEAUX SOCIAUX
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {content.socials.map((social) => (
+                {content.socials.map((social, index) => (
                   <Link
                     key={social.name}
+                    {...reveal(index)}
                     href={social.url}
                     target="_blank"
                     className="group p-4 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-300 hover:shadow-sm"

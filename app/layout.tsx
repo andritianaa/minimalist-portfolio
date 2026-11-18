@@ -83,17 +83,14 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-        <link rel="preconnect" href="https://cdn.simpleicons.org" />
-        <link rel="preconnect" href="https://upload.wikimedia.org" />
 
-        {/* DNS Prefetch pour d'autres domaines */}
-        <link rel="dns-prefetch" href="https://cdn.worldvectorlogo.com" />
-        <link rel="dns-prefetch" href="https://w7.pngwing.com" />
-
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/* Thème appliqué avant le premier rendu : sombre par défaut, sinon le
+            dernier choix du visiteur. La page ne clignote donc jamais. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem("theme");document.documentElement.classList.toggle("dark",t?t==="dark":true)}catch(e){document.documentElement.classList.add("dark")}`,
+          }}
+        />
 
         {/* Theme Color */}
         <meta
