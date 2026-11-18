@@ -818,9 +818,19 @@ export default function Home() {
                   {...reveal(index % 2, 120)}
                   href={post.link}
                   target="_blank"
-                  className="group p-6 sm:p-8 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-500 hover:shadow-lg cursor-pointer block"
+                  className="group border border-border rounded-lg overflow-hidden hover:border-muted-foreground/50 transition-all duration-500 hover:shadow-lg cursor-pointer block"
                 >
-                  <div className="space-y-4">
+                  <div className="aspect-video bg-muted relative overflow-hidden">
+                    <Image
+                      src={post.image}
+                      alt=""
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      quality={80}
+                    />
+                  </div>
+                  <div className="p-6 sm:p-8 space-y-4">
                     <div className="flex items-center justify-between text-xs text-muted-foreground font-mono">
                       <span>{post.date}</span>
                       <span>{post.readTime}</span>

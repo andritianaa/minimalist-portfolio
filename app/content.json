@@ -51,7 +51,7 @@
       }
     ],
     "contact": {
-      "email": "andritianasteve@gmail.com",
+      "email": "andritiana@araylab.com",
       "phone": "+261 38 62 319 63",
       "address": "Lot 141 A Ikianja Ambohimangakely"
     }
@@ -428,101 +428,107 @@
   "publications": [
     {
       "title": "Officiellement Ingénieur en Informatique et Télécommunications !",
-      "excerpt": "C'est avec une immense émotion que j'ai soutenu mon projet de fin d'études à l'ISPM. Le Pr RABOANARY Roland a qualifié ma présentation de « Masterclass technique ».",
-      "date": "Fev 2026",
-      "readTime": "3 min",
-      "link": "https://www.linkedin.com/feed/update/urn:li:share:7434115894135451648"
+      "excerpt": "C’est avec une immense émotion et une grande fierté que j’ai soutenu mon projet de fin d’études à l’ISPM.",
+      "date": "Mars 2026",
+      "readTime": "1 min",
+      "link": "https://www.linkedin.com/feed/update/urn:li:share:7434115894135451648",
+      "image": "/publications/7434115894135451648.jpg"
     },
     {
       "title": "Je crois que je viens d'ouvrir le livre le plus « dangereux » de ma bibliothèque.",
-      "excerpt": "Quand un auteur te conseille de consulter un médecin, un avocat ET une personne de bon sens avant même le chapitre 1, tu sais que ce n'est pas un livre de comptabilité.",
+      "excerpt": "Je tombe sur cette mise en garde dès la première page.",
       "date": "Fev 2026",
+      "readTime": "1 min",
+      "link": "https://www.linkedin.com/feed/update/urn:li:share:7432762218603024386",
+      "image": "/publications/7432762218603024386.jpg"
+    },
+    {
+      "title": "7 jours, 7 types de bases de données — Jour 7",
+      "excerpt": "Comment ChatGPT fait-il pour retrouver une information précise dans un PDF de 500 pages en une seconde ? Comment Google Photos sait-il retrouver \"chat sur un canapé\" sans que vous ayez tagué la photo ?",
+      "date": "Jan 2026",
       "readTime": "2 min",
-      "link": "https://www.linkedin.com/feed/update/urn:li:share:7432762218603024386"
+      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7420437538059952129",
+      "image": "/publications/7420437538059952129.jpg"
     },
     {
       "title": "7 jours, 7 types de bases de données — Jour 6",
-      "excerpt": "Sixième jour de la série : découverte d'un nouveau type de base de données.",
+      "excerpt": "Pourquoi LinkedIn peut-il vous dire instantanément que vous êtes une \"connexion de 3ème niveau\" avec un inconnu, alors qu'une base SQL classique mettrait le serveur à genoux pour calculer ça ?",
       "date": "Jan 2026",
       "readTime": "2 min",
-      "link": "https://www.linkedin.com/posts/andritianaa_7-jours-7-types-de-bases-de-donn%C3%A9es-jour-activity-7420437538059952129-YhgB?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7419998377175760897",
+      "image": "/publications/7419998377175760897.jpg"
     },
     {
       "title": "7 jours, 7 types de bases de données — Jour 5",
-      "excerpt": "Cinquième jour de la série : découverte d'un nouveau type de base de données.",
+      "excerpt": "Comment stocker la température d'un capteur toutes les secondes, ou le prix d'une action en bourse chaque milliseconde, sans saturer votre disque dur en deux jours ?",
       "date": "Jan 2026",
       "readTime": "2 min",
-      "link": "https://www.linkedin.com/posts/andritianaa_7-jours-7-types-de-bases-de-donn%C3%A9es-jour-activity-7419998377175760897-R3VV?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7419612901784834048",
+      "image": "/publications/7419612901784834048.jpg"
     },
     {
       "title": "7 jours, 7 types de bases de données — Jour 4",
-      "excerpt": "Quatrième jour de la série : découverte d'un nouveau type de base de données.",
+      "excerpt": "Comment font les plateformes comme Netflix ou Instagram pour répondre instantanément alors qu'elles gèrent des milliards de données ? Le secret tient souvent en deux mots : Clé-Valeur.",
       "date": "Jan 2026",
       "readTime": "2 min",
-      "link": "https://www.linkedin.com/posts/andritianaa_7-jours-7-types-de-bases-de-donn%C3%A9es-jour-activity-7419612901784834048-rTdk?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7419306514651418625",
+      "image": "/publications/7419306514651418625.jpg"
     },
     {
       "title": "7 jours, 7 types de bases de données — Jour 3",
-      "excerpt": "Troisième jour de la série : découverte d'un nouveau type de base de données.",
+      "excerpt": "Marre de devoir \"migrer\" votre base de données à chaque fois que vous ajoutez une option dans votre application ? Bienvenue dans le monde de la flexibilité : La Base de Données Orientée Document.",
       "date": "Jan 2026",
       "readTime": "2 min",
-      "link": "https://www.linkedin.com/posts/andritianaa_7-jours-7-types-de-bases-de-donn%C3%A9es-jour-activity-7419306514651418625-CHzI?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7418981511548477440",
+      "image": "/publications/7418981511548477440.jpg"
     },
     {
       "title": "7 jours, 7 types de bases de données — Jour 2",
-      "excerpt": "Deuxième jour de la série : découverte d'un nouveau type de base de données.",
+      "excerpt": "Hier, nous avons vu le champion de la structure et des transactions SQL.",
       "date": "Jan 2026",
       "readTime": "2 min",
-      "link": "https://www.linkedin.com/posts/andritianaa_7-jours-7-types-de-bases-de-donn%C3%A9es-jour-activity-7418981511548477440-SMYS?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7418599790571089920",
+      "image": "/publications/7418599790571089920.jpg"
     },
     {
       "title": "7 jours, 7 types de bases de données — Jour 1",
-      "excerpt": "Premier jour de la série : découverte d'un nouveau type de base de données.",
+      "excerpt": "Arrêtez de choisir vos bases de données \"au feeling\". Aujourd'hui, on commence par le pilier indétrônable : La Base de Données Relationnelle (SQL).",
       "date": "Jan 2026",
       "readTime": "2 min",
-      "link": "https://www.linkedin.com/posts/andritianaa_7-jours-7-types-de-bases-de-donn%C3%A9es-jour-activity-7418599790571089920-4UK3?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7418215509332172800",
+      "image": "/publications/7418215509332172800.jpg"
     },
     {
-      "title": "Backend, Architecture & SQL",
-      "excerpt": "Retour sur les fondamentaux du backend : architecture, patterns et bases de données relationnelles.",
+      "title": "Le 1er janvier, il y a trois types de développeurs...",
+      "excerpt": "Ceux qui profitent de leur grasse matinée, ceux qui réalisent soudainement qu'ils doivent mettre à jour manuellement la date de copyright sur tous leurs projets et ceux qui oublient.",
       "date": "Jan 2026",
       "readTime": "2 min",
-      "link": "https://www.linkedin.com/posts/andritianaa_backend-architecture-sql-activity-7418215509332172800-YUoF?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
-    },
-    {
-      "title": "Le 1er janvier, il y a trois types de développeurs",
-      "excerpt": "Le 1er janvier, il y a trois types de développeurs — et tu appartiens probablement à l'un d'eux.",
-      "date": "Jan 2026",
-      "readTime": "2 min",
-      "link": "https://www.linkedin.com/posts/andritianaa_le-1er-janvier-il-y-a-trois-types-de-d%C3%A9veloppeurs-activity-7417816887679627265-MsF3?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7417816887679627265",
+      "image": "/publications/7417816887679627265.jpg"
     },
     {
       "title": "Et si la voix du peuple trouvait enfin un écho ?",
-      "excerpt": "Ces dernières semaines, en suivant l'actualité à Madagascar, j'ai vu défiler des centaines de publications sur Facebook.",
-      "date": "Nov 2025",
-      "readTime": "6 min",
-      "link": "https://www.linkedin.com/posts/andritianaa_et-si-la-voix-du-peuple-trouvait-enfin-un-activity-7386314531519635457-luf-?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
-    },
-    {
-      "title": "4 règles pour retrouver la vraie concentration",
-      "excerpt": "En septembre, je partageais mon envie de reprendre le contrôle sur mon attention, j'ai donc commencé Deep Work de Cal Newport.",
-      "date": "Nov 2025",
-      "readTime": "2 min",
-      "link": "https://www.linkedin.com/posts/andritianaa_il-y-a-2-mois-je-partageais-mon-envie-de-activity-7379602328456437760-rdwk?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+      "excerpt": "Ces dernières semaines, en suivant l’actualité à Madagascar, j’ai vu défiler des centaines de publications sur Facebook. Des citoyens partagent leurs idées, leurs frustrations, leurs espoirs.",
+      "date": "Oct 2025",
+      "readTime": "1 min",
+      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7386314531519635457",
+      "image": "/publications/7386314531519635457.jpg"
     },
     {
       "title": "Je construis ma propre boilerplate fullstack.",
-      "excerpt": "Depuis quelque temps, je travaille sur un projet que j'aurais voulu avoir depuis longtemps...",
+      "excerpt": "Depuis quelque temps, je travaille sur un projet que j'aurais voulu avoir depuis longtemps : une boilerplate complète, pensée pour scaler, réutiliser et contrôler chaque partie de mes apps.",
       "date": "Oct 2025",
-      "readTime": "5 min",
-      "link": "https://www.linkedin.com/posts/andritianaa_je-construis-ma-propre-boilerplate-fullstack-activity-7382364377145909248-con4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+      "readTime": "3 min",
+      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7382364377145909248",
+      "image": "/publications/7382364377145909248.jpg"
     },
     {
-      "title": "Comment je reprends le contrôle",
-      "excerpt": "4 à 5 heures par jour. C'est le temps que je passe, parfois sans m'en rendre compte, sur mon téléphone.",
-      "date": "Sept 2025",
-      "readTime": "3 min",
-      "link": "https://www.linkedin.com/posts/andritianaa_4-%C3%A0-5-heures-par-jour-cest-le-temps-que-activity-7354050343325835264-Ki7G?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADbVk1EBBk2SvEk4TXe8TR0DC0u8PsnZFPQ"
+      "title": "4 à 5 heures par jour.",
+      "excerpt": "C’est le temps que je passe, parfois sans m’en rendre compte, sur mon téléphone.",
+      "date": "Juil 2025",
+      "readTime": "1 min",
+      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7354050343325835264",
+      "image": "/publications/7354050343325835264.jpg"
     }
   ],
   "socials": [
@@ -543,8 +549,8 @@
     },
     {
       "name": "Whatsapp",
-      "handle": "+261 32 67 082 11",
-      "url": "https://wa.me/261326708211"
+      "handle": "+261 38 62 319 63",
+      "url": "https://wa.me/261386231963"
     }
   ]
 }
