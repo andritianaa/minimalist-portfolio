@@ -119,6 +119,13 @@
   },
   "projects": [
     {
+      "title": "Halo",
+      "description": "Encoche intelligente et suite d'outils du quotidien pour Windows 10 et 11, écrite entièrement en Rust avec GPUI, le framework d'interface accéléré par GPU de l'éditeur Zed. Une encoche noire posée sur le bord de l'écran ouvre un tableau de bord (tâches, minuteur Pomodoro, CPU et RAM, musique en cours), un lanceur Ctrl+Space (applications, calculs, conversions, rappels), des notes, l'historique du presse-papiers, une pipette de couleurs, la capture d'écran et un coffre chiffré. Chaque module se désactive, tout reste en local, sans télémétrie. Open source.",
+      "image": "/halo.jpg",
+      "tech": ["Rust", "GPUI", "Windows", "Desktop", "Open source"],
+      "link": "https://github.com/andritianaa/halo"
+    },
+    {
       "title": "Mailaka",
       "description": "Plateforme e-mail auto-hébergée : boîtes professionnelles sur son propre domaine (comme Gmail), API d'envoi transactionnel (comme Resend) et console d'administration, installées en une commande sur son serveur. Connexion par clé d'accès, chiffrement en transit, supervision intégrée et mises à jour signées avec retour arrière automatique.",
       "image": "/mailaka.jpg",
